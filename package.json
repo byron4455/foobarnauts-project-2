@@ -14,7 +14,7 @@
     "url": "git+https://github.com/alperg/project2-starter-auth.git"
   },
   "engines": {
-    "npm": "5.7.1",
+    "npm": "8.5.0",
     "node": "16.14.2"
   },
   "keywords": [],
