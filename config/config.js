@@ -18,7 +18,7 @@ module.exports = {
     logging: false
   },
   production: {
-    username: '	uj4g65ob67ovgbxg',
+    username: 'uj4g65ob67ovgbxg',
     password: 'zi5zoezc8dx2etg2',
     database: 'sap7m17ztqxmz6hk',
     host: 'l6glqt8gsx37y4hs.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
