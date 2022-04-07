@@ -11,12 +11,7 @@ const app = express();
 const db = require('./models');
 
 app.use(cookieParser());
-app.use(session({
-  resave:true,
-  saveUninitialized:true,
-  secret:process.env.secret,
-  cookie:{maxAge:3600000*24}
-}))
+app.use(require('express-session')({ secret: process.env.secret, resave: true, saveUninitialized: true }));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
