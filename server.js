@@ -4,6 +4,7 @@ const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const passport = require('passport');
+const session = require('express-session');
 const moment = require('moment');
 const helmet = require('helmet');
 const PORT = process.env.PORT || 3333;
