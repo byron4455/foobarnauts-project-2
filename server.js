@@ -4,15 +4,13 @@ const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const passport = require('passport');
-const session = require('express-session');
 const moment = require('moment');
 const helmet = require('helmet');
 const PORT = process.env.PORT || 3333;
 const app = express();
 const db = require('./models');
 
-app.use(cookieParser(process.env.AUTH_SECRET));
-app.use(express.session());
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
