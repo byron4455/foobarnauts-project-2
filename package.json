@@ -11,19 +11,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alperg/project2-starter-auth.git"
+    "url": "git+https://github.com/byron4455/Group-Project-2"
   },
   "engines": {
     "npm": "8.5.0",
     "node": "16.14.2"
   },
-  "keywords": [
-    ""
-  ],
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alperg/project2-starter-auth/issues"
+    "url": "https://github.com/byron4455/Group-Project-2/issues"
   },
   "standard": {
     "globals": [
