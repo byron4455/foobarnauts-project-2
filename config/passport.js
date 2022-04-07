@@ -1,3 +1,4 @@
+require('dotenv').config();
 const session = require('express-session');
 const LocalStrategy = require('passport-local').Strategy;
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -7,7 +8,7 @@ module.exports = (db, app, passport) => {
   // Configure express-session to use MySQL for session storage
   app.use(session({
     key: 'userId',
-    secret: 'project2rocks2022!',
+    secret: process.env.SEQUELIZE_PASSWORD,
     store: new SequelizeStore({
       db: db.sequelize,
       table: 'Session',

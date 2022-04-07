@@ -19,9 +19,9 @@ module.exports = {
   },
   production: {
     username: 'uj4g65ob67ovgbxg',
-    password: 'zi5zoezc8dx2etg2',
+    password: process.env.SEQUELIZE_PASSWORD,
     database: 'sap7m17ztqxmz6hk',
-    host: 'l6glqt8gsx37y4hs.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    host: process.env.JASWSDB_HOST,
     port: 3306,
     dialect: 'mysql'
   }
