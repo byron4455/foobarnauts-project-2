@@ -11,7 +11,6 @@ const app = express();
 const db = require('./models');
 
 app.use(cookieParser());
-app.use(require('express-session')({ secret: process.env.SESSION_SECRET, resave: true, saveUninitialized: true }));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
