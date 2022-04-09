@@ -1,0 +1,187 @@
+
+  
+  html,body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    background: #F2F6FA;
+  }
+  /* HERO */
+  .hero{
+    background: url('/client/public/assets/images/charging.png');
+  width:100%;
+    height:29rem;
+    background-size: cover ; 
+   background-repeat: no-repeat;  
+  }  
+  /* SIGN UP FORM */
+  .sign-up-form{
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+    background: rgb(187,187,245);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card{
+    width: 350px;
+    height: 500px;
+    box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.26);
+    perspective:1000px ;
+  }
+  .inner-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(-180deg);
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  .card-front, .card-back{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-position: center;
+    /* background-size:cover;  */
+    background-size:contain; 
+     
+    /* background-repeat: no-repeat;   */
+    /* background-image: linear-gradient(rgba(0,0,100,0.8)),url('/client/public/assets/images/nightrider.png'); */
+    background-image:url('../images/nightrider.png');
+    padding:55px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+  }
+  .card-back{
+    transform: rotateY(180deg);
+  }
+  .card h2{
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .input-box{
+    width: 100%;
+    background:transparent;
+    border: 1px solid #fff;
+    margin: 6px 0;
+    height: 32px;
+    border-radius:20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    color: #fff;
+  }
+  ::placeholder{
+    color:#fff;
+    font-size: 12px;
+  }
+  button{
+    width: 100%;
+    background:transparent;
+    border: 1px solid #fff;
+    margin: 35px 0 10px;
+    height: 32px;
+    font-size: 12px;
+    border-radius:20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  .submit-btn{
+    position: relative;
+  }
+  .submit-btn::after{
+    content: '\27A4';
+    color: #333;
+    line-height: 32px;
+    font-size: 17px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background:#fff;
+    position:absolute;
+    right: -1px;
+    top: -1px;
+  }
+  span{
+    font-size:13px;
+    margin-left: 10px;
+  }
+  .card-btn{
+    margin-top: 70px;
+  }
+  .card a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+
+
+  /* NEW POST BUTTON */
+  .new-post .columns {
+    margin: 3rem 0;
+  }
+  /* TAGS */ 
+   /* MAKE CENTER ON SMALL SCREENS WITH MEDIA */
+  .navbar-menu .navbar-item {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: center; */
+  } 
+  aside.menu {
+    padding-top: 3rem;
+  }
+  aside.menu .menu-list {
+    line-height: 1.5;
+  }
+  aside.menu .menu-label {
+    padding-left: 10px;
+    font-weight: 700;
+  }
+  /* NEW POST BUTTON */
+  .button.is-primary.is-alt {
+    background: #00c6ff;
+    background: -webkit-linear-gradient(to bottom, #0072ff, #00c6ff);
+    background: linear-gradient(to bottom, #0072ff, #00c6ff);
+    font-weight: 700;
+    font-size: 14px;
+    height: 3rem;
+    line-height: 2.8;
+    margin: 9px;
+  
+  }
+  /* STYLING FOR COMMENTERS PHOTOS */
+  .media-left img {
+    border-radius: 50%;
+  }
+  /* STYLING FOR FORUM POST ON LANDING */
+  .media-content p {
+    font-size: 14px;
+    line-height: 2.3;
+    font-weight: 700;
+    color: #8F99A3;
+  }
+  article.post {
+    margin: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #E6EAEE;
+  }
+  article.post:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .menu-list li{
+    padding: 5px;
+  }
+  
+  /* FORM */
+  

@@ -1,12 +1,12 @@
-# Title of Project
+# Plugged In! Electric Vehicle Forum
 ## Description
 ## Table of Contents
 
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contributing](#contributing)
-  * [Deployment] (#deployment)
-  * [Demo]         (#demo)
+  * [Deployment](#deployment)
+  * [Demo](#demo)
   * [Requirements](#requirements)
   * [Tests](#tests) 
   <!-- * [Questions](#questions) -->
