@@ -1,4 +1,4 @@
-# Title of Project
+# Plugged In! Electric Vehicle Forum
 ## Description
 ## Table of Contents
 
@@ -16,7 +16,6 @@
 ## Usage
 ## Contributing 
 ## Deployment
-https://foobarnauts-project-2.herokuapp.com/
 ## Demo
 ## Requirements:
 ## Tests
