@@ -1,8 +1,5 @@
 
-  :root {
-    --blue-forum: #00c6ff;
-    
-  }
+  
   html,body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     /* background: #F2F6FA; */
@@ -26,7 +23,6 @@
     background-size: contain ; 
    background-repeat: no-repeat;  
   }  
-  
   /* SIGN UP FORM */
   .sign-up-form{
     width: 100%;
@@ -153,7 +149,7 @@
   }
   /* NEW POST BUTTON */
   .button.is-primary.is-alt {
-    background: var(--blue-forum);
+    background: #00c6ff;
     background: -webkit-linear-gradient(to bottom, #0072ff, #00c6ff);
     background: linear-gradient(to bottom, #0072ff, #00c6ff);
     font-weight: 700;
@@ -172,7 +168,7 @@
     font-size: 14px;
     line-height: 2.3;
     font-weight: 700;
-    color: #090d11;
+    color: #8F99A3;
   }
   article.post {
     margin: 1rem;
@@ -187,4 +183,9 @@
     padding: 5px;
   }
   
-/* FORUM POST LANDING PAGE */
+
+
+
+
+
+  
