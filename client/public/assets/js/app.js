@@ -1,3 +1,5 @@
+const { text } = require("express");
+
 $('#add-user').on('click', function (event) {
   event.preventDefault();
 
@@ -128,3 +130,40 @@ $('#login').on('click', function (event) {
     }
   });
 });
+
+  $('#research').on('click', function (event) {
+    event.preventDefault();
+    console.log('click is working!!!')
+    window.location.href = 'index2.html';
+  });
+  // https://vpic.nhtsa.dot.gov/api/vehicles/getmodelsformake/{carMake}?format=json
+  function callCarInfo(){
+    fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/GetVehicleVariableList?format=json`, {
+      method: "GET"
+    var carMake = InputEvent(text)
+  })
+  .then((response) => response.json()) 
+  .then((data) => {
+   console.log(data)
+  //  TODO: CREATE ARRAY OF MAKES TO DISPLAY IN DROP DOWN
+  // TODO: RETRIEVE USER SELECTED MAKE
+  // TODO: MAKE CALL TO 2ND API FOR INFORMATION
+  });
+  }
+  // TODO: MAY NEED TO MOVE DEPENDING ON WHERE USER SELECTS CAR. HOW DOES THE USER GUI FUNCTION?
+  $(document).ready(function() {
+    var loc_Array = (window.location.pathname.split("/"))
+    var pathname = loc_Array[loc_Array.length - 1] ==='index2.html'
+    if (pathname){
+      callCarInfo()
+    } 
+  })
+  // let options = {
+  //   "url": "https://apis.solarialabs.com/shine/v1/vehicle-stats/specs?make={value}&model={value}&year={value}&full-data={value}&apikey={value}",
+  //   "method": "GET",
+  //   "processData": false
+  // }
+  
+  // $.ajax(options).done((response)=>{
+  //   console.log(response)
+  // })
