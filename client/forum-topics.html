@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plugged In! Electric Vehicle Forum</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/plugged.ico">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- BULMA VERSION  0.9.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/bulma.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="logo" href="index.html">
+                <img src="./assets/images/logo.jpeg" width="82" height="28" alt="Pulgged In Logo">
+
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary" id="username">
+                        <strong>Log in</strong>
+                    </a>
+                    <!-- LOG-IN MODAL -->
+                    <div class="modal" id="loginModal">
+                        <div class="modal-background"></div>
+                        <div class="modal-content">
+
+                            <!-- SIGN IN/REGISTRATION FORM -->
+                            <div class="sign-up-form">
+                                <div class="card">
+                                    <div class="inner-box" id="card">
+                                        <div class="card-front">
+                                            <h2>Log in</h2>
+                                            <form>
+                                                <input type="email" class="input-box" placeholder="Your Email" required>
+                                                <input type="password" class="input-box" placeholder="Password"
+                                                    required>
+                                                <button type="submit" class="submit-btn">Submit</button>
+                                                <input type="checkbox"><span>Remember Me</span>
+                                            </form>
+                                            <button type="button" class="btn" onclick="openRegister()"><span>I am new
+                                                    here</span></button>
+                                            <a href="discussion.html">Forgot Password</a>
+                                        </div>
+                                        <div class="card-back">
+                                            <h2>Register</h2>
+                                            <form>
+                                                <input type="text" class="input-box" placeholder="Your Name" required>
+                                                <input type="email" class="input-box" placeholder="Your Email ID"
+                                                    required>
+                                                <input type="password" class="input-box" placeholder="Password"
+                                                    required>
+                                                <button type="submit" class="submit-btn">Submit</button>
+                                                <!-- <input type="checkbox"><span>Remember Me</span> -->
+                                            </form>
+                                            <button type="button" class="btn" onclick="openLogin()">I have an
+                                                account</button>
+                                            <!-- <a href="discussion.html">Forgot Password</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- END FORM -->
+                        </div>
+                        <button class="modal-close is-large" aria-label="close"></button>
+                    </div>
+                    <!-- END MODAL -->
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!-- HERO IMG -->
+    <div class="hero-img2">
+        <img src="./assets/images/lowbattery.jpeg" class="hero-img"
+            alt="Photo of electric vehicle at a charging station. ">
+    </div>
+    <div class="container">
+        <div class=" field has-addons">
+            <div class="control ">
+                <input class="input" type="text" placeholder="Find a repository">
+            </div>
+            <div class="control">
+                <a class="button is-info">
+                    Search
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- FORUM POST BEGINS -->
+    <div class="columns is-desktop">
+        <div class="column is-three-quarters-desktop">
+            <h2 class="title"><a href="forum-topics.html">General Electric Vehicle Discussion
+                </a></h2>
+            <div class="table-responsive">
+                <table class="table is-striped is-bordered is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="forum-col">Forum</th>
+                            <th scope="col">Topics</th>
+                            <th scope="col">Posts</th>
+                            <th scope="col" class="last-post-col">Last post</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h3 class="title is-5 is-marginless"><a href="topics-outline.html"
+                                        class="is-uppercase">Forum
+                                        name</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet pellentesque
+                                    lorem
+                                    sed
+                                    elementum.</p>
+                            </td>
+                            <td>
+                                <div>5</div>
+                            </td>
+                            <td>
+                                <div>18</div>
+                            </td>
+                            <td>
+                                <h4 class="title is-6 has-text-weight-bold is-marginless"><a href="discussion.html">Post
+                                        name</a>
+                                </h4>
+                                <div>by <a href="#0">Author name</a></div>
+                                <div>17 Apr 2022, 20:07</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 class="title is-5 is-marginless"><a href="topics-outline.html"
+                                        class="is-uppercase">Forum
+                                        name</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet pellentesque
+                                    lorem
+                                    sed
+                                    elementum.</p>
+                            </td>
+                            <td>
+                                <div>5</div>
+                            </td>
+                            <td>
+                                <div>18</div>
+                            </td>
+                            <td>
+                                <h4 class="title is-6 has-text-weight-bold is-marginless"><a href="discussion.html">Post
+                                        name</a>
+                                </h4>
+                                <div>by <a href="#0">Author name</a></div>
+                                <div>17 Apr 2022, 20:07</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 class="title is-5 is-marginless"><a href="topics-outline.html"
+                                        class="is-uppercase">Forum
+                                        name</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet pellentesque
+                                    lorem
+                                    sed
+                                    elementum.</p>
+                            </td>
+                            <td>
+                                <div>5</div>
+                            </td>
+                            <td>
+                                <div>18</div>
+                            </td>
+                            <td>
+                                <h4 class="title is-6 has-text-weight-bold is-marginless"><a href="discussion.html">Post
+                                        name</a>
+                                </h4>
+                                <div>by <a href="#0">Author name</a></div>
+                                <div>17 Apr 2022, 20:07</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 class="title is-5 is-marginless"><a href="topics-outline.html"
+                                        class="is-uppercase">Forum
+                                        name</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet pellentesque
+                                    lorem
+                                    sed
+                                    elementum.</p>
+                            </td>
+                            <td>
+                                <div>5</div>
+                            </td>
+                            <td>
+                                <div>18</div>
+                            </td>
+                            <td>
+                                <h4 class="title is-6 has-text-weight-bold is-marginless"><a href="discussion.html">Post
+                                        name</a>
+                                </h4>
+                                <div>by <a href="#0">Author name</a></div>
+                                <div>17 Apr 2022, 20:07</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 class="title is-5 is-marginless"><a href="topics-outline.html"
+                                        class="is-uppercase">Forum
+                                        name</a></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet pellentesque
+                                    lorem
+                                    sed
+                                    elementum.</p>
+                            </td>
+                            <td>
+                                <div>5</div>
+                            </td>
+                            <td>
+                                <div>18</div>
+                            </td>
+                            <td>
+                                <h4 class="title is-6 has-text-weight-bold is-marginless"><a href="discussion.html">Post
+                                        name</a>
+                                </h4>
+                                <div>by <a href="#0">Author name</a></div>
+                                <div>17 Apr 2022, 20:07</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- JS -->
+            <script src="././assets/js/script.js"></script>
+</body>
+
+</html>
