@@ -31,5 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       Comment.hasOne(models.Topic,{
           foreignKey: 'in_topic',
       });
-    }
+    };
+
+    return Comment;
 }
