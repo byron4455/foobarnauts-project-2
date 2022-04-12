@@ -1,4 +1,4 @@
-# Title of Project
+# Plugged In! Electric Vehicle Forum
 ## Description
 ## Table of Contents
 
