@@ -26,10 +26,10 @@ module.exports = (sequelize, DataTypes) => {
 
     Comment.associate = (models) => {
       Comment.hasOne(models.User,{
-          foreignKey: 'posted_by'
+          foreignKey: 'id'
       });
       Comment.hasOne(models.Topic,{
-          foreignKey: 'in_topic',
+          foreignKey: 'id',
       });
     };
 

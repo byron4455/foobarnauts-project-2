@@ -23,11 +23,12 @@ module.exports = (sequelize, DataTypes) => {
 
   Topic.associate = (models) => {
     Topic.hasOne(models.User, {
-        foreignKey: 'poster_id'
-    }),
-    Topic.hasMany(model.Comment, {
-        onDelete: 'cascade'
+        foreignKey: 'id'
     })
+    //,
+    // Topic.hasMany(models.Comment, {
+    //     onDelete: 'cascade'
+    // })
   };
 
   return Topic;
