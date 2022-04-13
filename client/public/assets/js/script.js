@@ -137,20 +137,46 @@ $('#login').on('click', function (event) {
     window.location.href = 'index2.html';
   });
   
-  // Need to request atvtype=EV to filter electric cars
-  function callCarInfo(){
-    fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/atvtype=ev`, (req, res) => res.send['make', 'model', 'year',  'city08',  'rangeCity', 'range', 'highway08', 'charge240b', 'fuelCost08'] {
-      method: "GET"
-    // var carMake = InputEvent(text)
-  })
-  .then((response) => response.json()) 
-  .then((data) => {
-   console.log(data)
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
+      "X-RapidAPI-Key": "KyNZyDwQySmsh71Zva51yAb90PL8p1YmArmjsns2ZSMTE7P2js",
+    },
+  };
+
+  // https://rapidapi.com/apininjas/api/cars-by-api-ninjas/
+  fetch(
+    "https://cars-by-api-ninjas.p.rapid capi.com/v1/cars?fuel_type=electricity",
+    options
+  )
+    .then((response) => response.json())
+    .then((response) => console.log(response))
+    .catch((err) => console.error(err));
+
+  const options2 = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Host": "car-data.p.rapidapi.com",
+      "X-RapidAPI-Key": "KyNZyDwQySmsh71Zva51yAb90PL8p1YmArmjsns2ZSMTE7P2js",
+    },
+  };
+
+  // https://rapidapi.com/principalapis/api/car-data/
+  fetch(
+    "https://car-data.p.rapidapi.com/cars?limit=10&page=0&make=tesla",
+    options2
+  )
+    .then((response) => response.json())
+    .then((response) => console.log(response))
+    .catch((err) => console.error(err));
+
+  
   //  TODO: CREATE ARRAY OF MAKES TO DISPLAY IN DROP DOWN
   // TODO: RETRIEVE USER SELECTED MAKE
   // TODO: MAKE CALL TO 2ND API FOR INFORMATION
-  });
-  }
+ 
+  
   // TODO: MAY NEED TO MOVE DEPENDING ON WHERE USER SELECTS CAR. HOW DOES THE USER GUI FUNCTION? 
   $(document).ready(function() {
     var loc_Array = (window.location.pathname.split("/"))
@@ -158,13 +184,4 @@ $('#login').on('click', function (event) {
     if (pathname){
       callCarInfo()
     } 
-  })
-  // let options = {
-  //   "url": "https://apis.solarialabs.com/shine/v1/vehicle-stats/specs?make={value}&model={value}&year={value}&full-data={value}&apikey={value}",
-  //   "method": "GET",
-  //   "processData": false
-  // }
-  
-  // $.ajax(options).done((response)=>{
-  //   console.log(response)
-  // })
+  });
