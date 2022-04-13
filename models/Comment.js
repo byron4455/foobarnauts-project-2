@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             primaryKey: true
         },
-        posted_by: {
+        poster_id: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
@@ -25,11 +25,11 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     Comment.associate = (models) => {
-      Comment.hasOne(models.User,{
-          foreignKey: 'id'
+      Comment.belongsTo(models.User,{
+          
       });
-      Comment.hasOne(models.Topic,{
-          foreignKey: 'id',
+      Comment.belongsTo(models.Topic,{
+          onDelete: 'cascade'
       });
     };
 

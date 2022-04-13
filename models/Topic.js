@@ -22,13 +22,12 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Topic.associate = (models) => {
-    Topic.hasOne(models.User, {
-        foreignKey: 'id'
+    Topic.belongsTo(models.User, {
+    }),
+    Topic.hasMany(models.Comment, {
+        foreignKey: 'in_topic',
+        onDelete: 'cascade'
     })
-    //,
-    // Topic.hasMany(models.Comment, {
-    //     onDelete: 'cascade'
-    // })
   };
 
   return Topic;
