@@ -55,6 +55,7 @@
     "sequelize-cli": "^6.4.1"
   },
   "devDependencies": {
+    "@types/express-handlebars": "^6.0.0",
     "eslint": "^7.9.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-import": "2.22.0",

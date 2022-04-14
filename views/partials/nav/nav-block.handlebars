@@ -1,35 +1,31 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-  <!-- Brand/logo -->
-  <a class="navbar-brand" href="/">
-    AppName
-  </a>
-  
-  <!-- Links -->
-  <ul class="nav navbar-nav ml-auto">
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="logo" href="/">
+        <img src="./assets/images/1logo.jpeg" width="82" height="28" alt="Pulgged In Logo">
 
-    {{!-- <li class="nav-item">
-      <a class="nav-link" href="/some-feature">Menu item here</a>
-    </li> --}}
-
-    {{#if isloggedin}}
-      <li class="nav-item">
-        <a class="nav-link" href="/example">Example page</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/profile">My Profile</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/logout">Logout</a>
-      </li>
-    {{else}}
-      <li class="nav-item">
-        <a class="nav-link" href="#" id="login-modal">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/register" data-register={{register}}>Register</a>
-      </li>
-    {{/if}}
-  </ul>
-</nav>
-
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        {{#if isloggedin}}
+        <a href="/"> <button type="btn" class="btn">Home</button></a>
+        <a href="/profile"> <button type="btn" class="btn">Profile</button></a>
+        <a href="topic"> <button type="btn" class="btn">Forum</button></a>
+      {{else}}
+        <div class="buttons">
+          <a class="button is-primary" id="username">
+            <strong>Log in</strong>
+            {{/if}}
+          </a>
+          </div>
+          </nav>
+           <div class="hero">
+        <img src="/assets/images/charging.png" class="hero-img"
+            alt="Photo of electric vehicle at a charging station.">
+    </div>
 {{> modal/login-block}}

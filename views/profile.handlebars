@@ -1,8 +1,8 @@
 {{> nav/nav-block user=true register=false}}
 
 <div class="container">
-  <header align="center" class="header-wrap">
-    <h3>View or update your user</h3>
+  <header align="center">
+    <h2 class="title is-2">View or update your user</h2>
     <div class="userId">
       {{!-- <h3>Welcome, {{userInfo.firstName}}</h3> --}}
       {{!-- <h5 id="user-number" data-useremail="{{userInfo.email}}">Account email: {{userInfo.email}}</h5> --}}
@@ -11,34 +11,31 @@
   </header>
 
   <form id="user-form">
-    <div class="form-row">
-      <div class="form-group col-md-6">
+    <div class="tile is-ancestor is-vertical">
+      <div class="tile is-4 is-vertical">
         <label for="inputFirst">First Name</label>
         <input type="text" class="form-control" id="inputFirst" value="{{userInfo.firstName}}" placeholder="John">
-      </div>
-      <div class="form-group col-md-6">
         <label for="inputLast">Last Name</label>
         <input type="text" class="form-control" id="inputLast" value="{{userInfo.lastName}}" placeholder="Doe">
       </div>
-    </div>
+    
 
-    <div class="form-row">
-      <div class="form-group col-md-6">
+    <div class="tile is-4 is-vertical">
         <label for="inputPassword">Email</label>
         <input type="text" class="form-control" id="inputEmail" value="{{userInfo.email}}">
-      </div>
-      <div class="form-group col-md-6">
         <label for="inputPassword">Password</label>
         <input type="password" class="form-control" id="inputPassword" value="{{userInfo.password}}">
       </div>
-    </div>
-
-    <div>
+      </div>
+    
+<div id="choice">
+    <div class="options">
       <button type="submit" id="update-user" data-id="{{userInfo.id}}" class="btn btn-primary">Update</button>
       {{#unless userInfo.isAdmin}}
         <button type="submit" id="delete-user" class="btn btn-primary">Delete</button>
       {{/unless}}
       <button type="submit" id="view-user" data-id="{{userInfo.id}}" class="btn btn-primary">Refresh</button>
+    </div>
     </div>
   </form>
 

@@ -1,0 +1,29 @@
+
+<section class="section">
+        <div class="container">
+            <h2 class="title">Create New Topic</h2>
+            <form id="new-post">
+                <div class="field">
+                    <label class="label" for="topic">Topic:</label>
+                    <div class="control">
+                        <input type="text" class="input" id="topic" placeholder="Give your topic a title." required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="comment">Comment:</label>
+                    <div class="control">
+                        <textarea class="textarea" id="comment" rows="10" placeholder="Write your comment here."
+                            required></textarea>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox" id="checkbox" value="notification">
+                        Notify me upon replies.
+                    </label>
+                </div>
+                <button type="submit" class="button is-primary">Submit</button>
+                <a href="/topic" type="reset" id="cancel" class="button is-danger">Cancel</a>
+            </form>
+        </div>
+    </section>

@@ -121,10 +121,85 @@ $('#login').on('click', function (event) {
   $.post('/api/login', user, (result) => {
     // console.log(result);
     if (result.loggedIn) {
-      $(document.location).attr('href', '/dashboard');
+      window.location.href = '/profile';
     } else {
       $('#login-err-msg').empty('').text(result.error);
       $('#user-info').modal('hide');
     }
   });
 });
+
+// LOG IN/REGISTRATION FORM
+let card = document.getElementById ("card");
+let usernameButton = document.getElementById('username');
+let loginModal = document.getElementById('loginModal');
+let close = document.getElementsByClassName('modal-close')[0];
+
+// ROTATES LOGIN FORM TO REGISTER FORM
+function openRegister(){
+    card.style.transform ="rotateY(-180deg)";
+
+}
+function openLogin(){
+    card.style.transform ="rotateY(0deg)";
+}
+// TARGET LOGIN BUTTON & MODAL
+usernameButton.onclick = function() {
+   loginModal.style.display = 'block';
+}
+
+close.onclick =function(){
+    loginModal.style.display ='none';
+}
+// ALLOWS MODAL TO CLOSE BY CLICIING ANY SPACE OUTSIDE OF FORM
+window.onclick = function(event){
+if (event.target.className == 'sign-up-form'){
+    loginModal.style.display ='none';
+}
+}
+// NAVBAR BURGER
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+  
+      // Add a click event on each of them
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+  
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+  
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+  
+        });
+      });
+    }
+  
+  });
+  const rmCheck = document.getElementById("rememberMe"),
+    emailInput = document.getElementById("email");
+
+if (localStorage.checkbox && localStorage.checkbox !== "") {
+  rmCheck.setAttribute("checked", "checked");
+  emailInput.value = localStorage.username;
+} else {
+  rmCheck.removeAttribute("checked");
+  emailInput.value = "";
+}
+
+function lsRememberMe() {
+  if (rmCheck.checked && emailInput.value !== "") {
+    localStorage.username = emailInput.value;
+    localStorage.checkbox = rmCheck.value;
+  } else {
+    localStorage.username = "";
+    localStorage.checkbox = "";
+  }
+};

@@ -10,6 +10,56 @@ module.exports = (db) => {
     }
   });
 
+  // router.get('/topic', (req, res) => {
+  //   if (req.isAuthenticated()) {
+  //     res.render('topic');
+  //   } else {
+  //     res.redirect('dashboard');
+  //   }
+  // });
+  router.get('/newpost', (req, res) => {
+    if (req.isAuthenticated()) {
+      db.User.findOne({
+        where: {
+          id: req.session.passport.user.id
+        }
+      }).then(() => {
+        const user = {
+          userInfo: req.session.passport.user,
+          isloggedin: req.isAuthenticated()
+        };
+        // console.log(user);
+        res.render('newpost', user);
+      });
+    } else {
+      res.redirect('/');
+    }
+  });
+
+
+  router.get('/topic', (req, res) => {
+    if (req.isAuthenticated()) {
+      db.User.findOne({
+        where: {
+          id: req.session.passport.user.id
+        }
+      }).then(() => {
+        const user = {
+          userInfo: req.session.passport.user,
+          isloggedin: req.isAuthenticated()
+        };
+        // console.log(user);
+        res.render('topic', user);
+      });
+    } else {
+      res.redirect('/');
+    }
+  });
+  // router.get('/topics', (req, res) => {
+  //   if (req.isAuthenticated()) {
+  //     res.render('topics');
+  //   }
+  // });
   // Load profile page
   router.get('/profile', (req, res) => {
     if (req.isAuthenticated()) {

@@ -15,6 +15,7 @@ function openLogin(){
 }
 // TARGET LOGIN BUTTON & MODAL
 usernameButton.onclick = function() {
+    console.log("PUSHED");
    loginModal.style.display = 'block';
 }
 
