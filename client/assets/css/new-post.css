@@ -1,0 +1,16 @@
+/* NAVIGATION */
+.navbar{
+    background-color: #1f3764;
+  }
+  .navbar-menu, .logo{
+    padding: 0 2rem;
+    display: flex;
+  }
+  .navbar-brand{
+    position: relative;
+    background: url('../images/logo2.png');
+    width:300px;
+    left: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

@@ -13,7 +13,7 @@
     <!-- BULMA VERSION  0.9.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/bulma.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/new-post.css">
 </head>
 
 
@@ -24,7 +24,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="logo" href="index.html">
-                <img src="./assets/images/logo.jpeg" width="62" height="28">
+                <!-- <img src="./assets/images/logo.jpeg" width="62" height="28"> -->
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
                 data-target="navbarBasicExample">
@@ -71,8 +71,10 @@
                         Notify me upon replies.
                     </label>
                 </div>
-                <button type="submit" class="button is-primary">Submit</button>
-                <button type="reset" class="button is-danger">Cancel</button>
+                <button onclick="window.history.go(-1); return false;" type="submit"
+                    class="button is-primary">Submit</button>
+                <button onclick="window.history.go(-1); return false;" type="reset"
+                    class="button is-danger">Cancel</button>
             </form>
         </div>
     </section>
