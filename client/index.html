@@ -19,116 +19,121 @@
 <body>
 
   <!-- NAVIGATION -->
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="index.html">
-        <img src="./assets/images/logo2.png"></a>
 
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <a class="logo" href="index.html">
+      <img src="./assets/images/logo1.png" width="120" height="" alt="Pulgged In Logo">
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item">
-          Home
-        </a>
-
-        <a class="navbar-item">
-          Documentation
-        </a>
-
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More
-          </a>
-
-          <div class="navbar-dropdown">
-            <a class="navbar-item">
-              About
-            </a>
-            <a class="navbar-item">
-              Jobs
-            </a>
-            <a class="navbar-item">
-              Contact
-            </a>
-            <hr class="navbar-divider">
-            <a class="navbar-item">
-              Report an issue
-            </a>
-          </div>
-        </div>
       </div>
 
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-primary" id="signIn">
-              <strong>Log in</strong>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="discussion.html">
+            Disscussions
+          </a>
+
+          <a class="navbar-item" href="forum-topics.html">
+            Forum Topics
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              What's New!?
             </a>
-            <!-- LOG-IN MODAL -->
 
-            <div class="modal" id="loginModal">
-              <div class="modal-background"></div>
-              <div class="modal-content">
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                About
+              </a>
+              <a class="navbar-item">
+                Jobs
+              </a>
+              <a class="navbar-item">
+                Contact
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary" id="signIn">
+                <strong>Log in</strong>
+              </a>
+              <!-- LOG-IN MODAL -->
 
-                <!-- SIGN IN/REGISTRATION FORM -->
-                <div id="modal">
-                  <div class="sign-up-form">
-                    <div class="card">
-                      <div class="inner-box" id="card">
-                        <div class="card-front">
-                          <h2>Log in</h2>
-                          <form>
-                            <label for="inputAccount">Email</label>
-                            <input type="text" id="email" class="input-box" placeholder="Enter Email">
-                            <label for="inputAccount">Passwords</label>
-                            <input type="password" id="user_password" class="input-box" placeholder="Enter Password">
-                            <button type="submit" class="submit-btn">Submit</button>
-                            <input type="checkbox"><span>Remember Me</span>
-                          </form>
-                          <button type="button" class="btn" onclick="openRegister()"><span>I am new
-                              here</span></button>
-                          <a href="">Forgot Password</a>
-                        </div>
-                        <div class="card-back">
-                          <h2>Register</h2>
-                          <p>Please fill in this form to create an account.</p>
-                          <form>
-                            <label for="inputFirst">First Name</label>
-                            <input type="text" class="input-box" placeholder="First Name" required>
-                            <label for="inputLast">Last Name</label>
-                            <input type="text" class="input-box" placeholder="Last Name" required>
-                            <label for="inputEmail">Email</label>
-                            <input type="text" class="input-box" placeholder="Enter Email" required>
-                            <label for="pwd">Password</label>
-                            <input type="inputPassword" class="input-box" placeholder="Enter Password" required>
-                            <button type="submit" id="add-user" class="submit-btn">Submit</button>
-                          </form>
-                          <button type="button" class="btn" onclick="openLogin()">I have an account</button>
-                          <a href="">Forgot Password</a>
+              <div class="modal" id="loginModal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+
+                  <!-- SIGN IN/REGISTRATION FORM -->
+                  <div id="modal">
+                    <div class="sign-up-form">
+                      <div class="card">
+                        <div class="inner-box" id="card">
+                          <div class="card-front">
+                            <h2>Log in</h2>
+                            <form>
+                              <label for="inputAccount">Email</label>
+                              <input type="text" id="email" class="input-box" placeholder="Enter Email">
+                              <label for="inputAccount">Passwords</label>
+                              <input type="password" id="user_password" class="input-box" placeholder="Enter Password">
+                              <button type="submit" class="submit-btn">Submit</button>
+                              <input type="checkbox"><span>Remember Me</span>
+                            </form>
+                            <button type="button" class="btn" onclick="openRegister()"><span>I
+                                am
+                                new
+                                here</span></button>
+                            <a href="">Forgot Password</a>
+                          </div>
+                          <div class="card-back">
+                            <h2>Register</h2>
+                            <p>Please fill in this form to create an account.</p>
+                            <form>
+                              <label for="inputFirst">First Name</label>
+                              <input type="text" class="input-box" placeholder="First Name" required>
+                              <label for="inputLast">Last Name</label>
+                              <input type="text" class="input-box" placeholder="Last Name" required>
+                              <label for="inputEmail">Email</label>
+                              <input type="text" class="input-box" placeholder="Enter Email" required>
+                              <label for="pwd">Password</label>
+                              <input type="inputPassword" class="input-box" placeholder="Enter Password" required>
+                              <button type="submit" id="add-user" class="submit-btn">Submit</button>
+                            </form>
+                            <button type="button" class="btn" onclick="openLogin()">I have
+                              an
+                              account</button>
+                            <a href="">Forgot Password</a>
+                          </div>
                         </div>
                       </div>
                     </div>
+
+                    <!-- END FORM -->
                   </div>
+                  <button class="modal-close is-large" aria-label="close"></button>
+                </div> -->
+                <!-- END MODAL -->
 
-                  <!-- END FORM -->
-                </div>
-                <button class="modal-close is-large" aria-label="close"></button>
-              </div> -->
-              <!-- END MODAL -->
-
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
   </nav>
+
+
 
   <!-- HERO IMG -->
   <div id="hero" class="hero-img">
@@ -541,7 +546,15 @@
   </section>
 
   <!-- Footer -->
-
+  <footer class="footer">
+    <div class="container">
+      <ul class="level">
+        <li class="level-item">The Foobarnauts</li>
+        <li class="level-item">All rights reserved.</li>
+        <li class="level-item"><a href="#">Terms of use and privacy policy</a>.</li>
+      </ul>
+    </div>
+  </footer>
 
   <!-- JS -->
   <script src="././assets/js/script.js"></script>

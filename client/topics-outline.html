@@ -18,114 +18,137 @@
 
 <body>
     <!-- NAVIGATION -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="logo" href="index.html">
-                <!-- <img src="./assets/images/logo.jpeg" width="82" height="28" alt="Pulgged In Logo"> -->
 
-            </a>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <a class="logo" href="index.html">
+            <img src="./assets/images/logo1.png" width="120" height="" alt="Pulgged In Logo">
+
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
                 data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
-        </div>
-        <!-- <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item">
-                    Category
-                </a>
-                <a class="navbar-item">
-                    Category
-                </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        Category
+            </div>
+
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="discussion.html">
+                        Disscussions
                     </a>
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item">
-                            What's New
+
+                    <a class="navbar-item" href="forum-topics.html">
+                        Forum Topics
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            What's New!?
                         </a>
-                        <a class="navbar-item">
-                            Marketplace
-                        </a>
-                        <a class="navbar-item">
-                            Gallery
-                        </a>
-                        <hr class="navbar-divider">
-                        <a class="navbar-item">
-                            FAQ
-                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">
+                                About
+                            </a>
+                            <a class="navbar-item">
+                                Jobs
+                            </a>
+                            <a class="navbar-item">
+                                Contact
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item">
+                                Report an issue
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div> -->
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button is-primary" id="username">
-                        <strong>Log in</strong>
-                    </a>
-                    <!-- LOG-IN MODAL -->
-                    <div class="modal" id="loginModal">
-                        <div class="modal-background"></div>
-                        <div class="modal-content">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary" id="signIn">
+                                <strong>Log in</strong>
+                            </a>
+                            <!-- LOG-IN MODAL -->
 
-                            <!-- SIGN IN/REGISTRATION FORM -->
-                            <div class="sign-up-form">
-                                <div class="card">
-                                    <div class="inner-box" id="card">
-                                        <div class="card-front">
-                                            <h2>Log in</h2>
-                                            <form>
-                                                <input type="email" class="input-box" placeholder="Your Email" required>
-                                                <input type="password" class="input-box" placeholder="Password"
-                                                    required>
-                                                <button type="submit" class="submit-btn">Submit</button>
-                                                <input type="checkbox"><span>Remember Me</span>
-                                            </form>
-                                            <button type="button" class="btn" onclick="openRegister()"><span>I am
-                                                    new
-                                                    here</span></button>
-                                            <a href="">Forgot Password</a>
+                            <div class="modal" id="loginModal">
+                                <div class="modal-background"></div>
+                                <div class="modal-content">
+
+                                    <!-- SIGN IN/REGISTRATION FORM -->
+                                    <div id="modal">
+                                        <div class="sign-up-form">
+                                            <div class="card">
+                                                <div class="inner-box" id="card">
+                                                    <div class="card-front">
+                                                        <h2>Log in</h2>
+                                                        <form>
+                                                            <label for="inputAccount">Email</label>
+                                                            <input type="text" id="email" class="input-box"
+                                                                placeholder="Enter Email">
+                                                            <label for="inputAccount">Passwords</label>
+                                                            <input type="password" id="user_password" class="input-box"
+                                                                placeholder="Enter Password">
+                                                            <button type="submit" class="submit-btn">Submit</button>
+                                                            <input type="checkbox"><span>Remember Me</span>
+                                                        </form>
+                                                        <button type="button" class="btn"
+                                                            onclick="openRegister()"><span>I
+                                                                am
+                                                                new
+                                                                here</span></button>
+                                                        <a href="">Forgot Password</a>
+                                                    </div>
+                                                    <div class="card-back">
+                                                        <h2>Register</h2>
+                                                        <p>Please fill in this form to create an account.</p>
+                                                        <form>
+                                                            <label for="inputFirst">First Name</label>
+                                                            <input type="text" class="input-box"
+                                                                placeholder="First Name" required>
+                                                            <label for="inputLast">Last Name</label>
+                                                            <input type="text" class="input-box" placeholder="Last Name"
+                                                                required>
+                                                            <label for="inputEmail">Email</label>
+                                                            <input type="text" class="input-box"
+                                                                placeholder="Enter Email" required>
+                                                            <label for="pwd">Password</label>
+                                                            <input type="inputPassword" class="input-box"
+                                                                placeholder="Enter Password" required>
+                                                            <button type="submit" id="add-user"
+                                                                class="submit-btn">Submit</button>
+                                                        </form>
+                                                        <button type="button" class="btn" onclick="openLogin()">I have
+                                                            an
+                                                            account</button>
+                                                        <a href="">Forgot Password</a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="card-back">
-                                            <h2>Register</h2>
-                                            <form>
-                                                <input type="text" class="input-box" placeholder="Your Name" required>
-                                                <input type="email" class="input-box" placeholder="Your Email ID"
-                                                    required>
-                                                <input type="password" class="input-box" placeholder="Password"
-                                                    required>
-                                                <button type="submit" class="submit-btn">Submit</button>
-                                                <!-- <input type="checkbox"><span>Remember Me</span> -->
-                                            </form>
-                                            <button type="button" class="btn" onclick="openLogin()">I have an
-                                                account</button>
-                                            <!-- <a href="">Forgot Password</a> -->
-                                        </div>
+
+                                        <!-- END FORM -->
                                     </div>
-                                </div>
+                                    <button class="modal-close is-large" aria-label="close"></button>
+                                </div> -->
+                                <!-- END MODAL -->
+
                             </div>
-
-                            <!-- END FORM -->
                         </div>
-                        <button class="modal-close is-large" aria-label="close"></button>
                     </div>
-                    <!-- END MODAL -->
-
                 </div>
             </div>
-        </div>
-        </div>
     </nav>
-    <!-- HERO IMG -->
-    <!-- <div class="hero">
-        <img src="./assets/images/charging.jpeg" class="hero-img"
-            alt="Photo of electric vehicle at a charging station.">
-    </div> -->
 
-    <h2 class="title">Forum name</h2>
+
+    <!-- HERO IMG -->
+    <div class="hero">
+        <img src="./assets/images/evcharge.jpeg" class="hero-img"
+            alt="Photo of electric vehicle at a charging station.">
+    </div>
+
+    <h2 class="title">Finding Public Charging Points are Becoming Easier than Ever!</h2>
     <div class="table-responsive">
         <table class="table is-striped is-bordered is-fullwidth">
             <thead>
@@ -139,7 +162,7 @@
             <tbody>
                 <tr>
                     <td>
-                        <h3><span class="tag is-primary">7 unread</span> <a href="question.html">Forum post
+                        <h3><span class="tag is-primary">7 unread</span> <a href="discussion.html">Forum post
                                 title with a complex and long question</a></h3>
                         <div class="small">Go to page: <a href="#0">1</a>, <a href="#0">2</a>, <a href="#0">3</a>
                             &hellip; <a href="#0">7</a>, <a href="#0">8</a>, <a href="#0">9</a></div>
@@ -160,7 +183,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><span class="tag is-primary">4 unread</span> <a href="question.html">Forum post
+                        <h3><span class="tag is-primary">4 unread</span> <a href="discussion.html">Forum post
                                 title
                                 with a complex and long question</a></h3>
                         <div class="small">Go to page: <a href="#0">1</a>, <a href="#0">2</a>, <a href="#0">3</a>
@@ -182,7 +205,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><span class="tag is-primary">1 unread</span> <a href="question.html">Forum post
+                        <h3><span class="tag is-primary">1 unread</span> <a href="discussion.html">Forum post
                                 title
                                 with a complex and long question</a></h3>
                         <div class="small">Go to page: <a href="#0">1</a>, <a href="#0">2</a>, <a href="#0">3</a>
@@ -204,7 +227,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><a href="question.html">Forum post title with a complex and long question</a></h3>
+                        <h3><a href="discussion.html">Forum post title with a complex and long question</a></h3>
                     </td>
                     <td>
                         <div>by <a href="#">Author name</a></div>
@@ -222,7 +245,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><a href="question.html">Forum post title with a complex and long question</a></h3>
+                        <h3><a href="discussion.html">Forum post title with a complex and long question</a></h3>
                     </td>
                     <td>
                         <div>by <a href="#">Author name</a></div>
@@ -240,7 +263,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><a href="question.html">Forum post title with a complex and long question</a></h3>
+                        <h3><a href="discussion.html">Forum post title with a complex and long question</a></h3>
                     </td>
                     <td>
                         <div>by <a href="#">Author name</a></div>
@@ -258,7 +281,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><a href="question.html">Forum post title with a complex and long question</a></h3>
+                        <h3><a href="discussion.html">Forum post title with a complex and long question</a></h3>
                     </td>
                     <td>
                         <div>by <a href="#">Author name</a></div>
@@ -276,7 +299,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><a href="question.html">Forum post title with a complex and long question</a></h3>
+                        <h3><a href="discussion.html">Forum post title with a complex and long question</a></h3>
                     </td>
                     <td>
                         <div>by <a href="#">Author name</a></div>
@@ -294,7 +317,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><a href="question.html">Forum post title with a complex and long question</a></h3>
+                        <h3><a href="discussion.html">Forum post title with a complex and long question</a></h3>
                     </td>
                     <td>
                         <div>by <a href="#">Author name</a></div>
@@ -312,7 +335,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><a href="question.html">Forum post title with a complex and long question</a></h3>
+                        <h3><a href="discussion.html">Forum post title with a complex and long question</a></h3>
                     </td>
                     <td>
                         <div>by <a href="#">Author name</a></div>
@@ -344,62 +367,24 @@
             <li><a class="pagination-link" aria-label="Goto page 31">31</a></li>
         </ul>
     </nav>
-    <!-- <form id="sort-and-filter" class="is-flex-desktop">
-                <div class="field is-flex-desktop">
-                    <label class="label" for="select-time">Display posts from previous:</label>
-                    <div class="control">
-                        <div class="select is-small">
-                            <select id="select-time">
-                                <option value="all-posts" selected>All posts</option>
-                                <option value="day">1 day</option>
-                                <option value="week">1 week</option>
-                                <option value="month">1 month</option>
-                                <option value="year">1 year</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="field is-flex-desktop">
-                    <label class="label" for="select-sort">Sort by:</label>
-                    <div class="control">
-                        <div class="select is-small">
-                            <select id="select-sort">
-                                <option value="author">Author</option>
-                                <option value="post-time" selected>Post time</option>
-                                <option value="replies">Replies</option>
-                                <option value="subject">Subject</option>
-                                <option value="views">Views</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="field is-flex-desktop">
-                    <label class="label" for="select-direction">Sort direction</label>
-                    <div class="control">
-                        <div class="select is-small">
-                            <select id="select-direction">
-                                <option value="post-time">Ascending</option>
-                                <option value="author" selected="">Descending</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="control">
-                        <button type="submit" class="button is-small is-primary">Go</button>
-                    </div>
-                </div>
-            </form> -->
+
     <a href="new-post.html" class="button is-large is-primary">New topic</a>
     </div>
     </section>
-
-
     <!-- Footer -->
-
-
+    <footer class="footer">
+        <div class="container">
+            <ul class="level">
+                <li class="level-item">The Foobarnauts</li>
+                <li class="level-item">All rights reserved.</li>
+                <li class="level-item"><a href="#">Terms of use and privacy policy</a>.</li>
+            </ul>
+        </div>
+    </footer>
     <!-- JS -->
     <script src="././assets/js/script.js"></script>
+    <script src="././assets/js/app.js"></script>
+
 </body>
 
 </html>
