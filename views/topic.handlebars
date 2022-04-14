@@ -16,15 +16,16 @@
             <tbody>
                 <tr>
                     <td>
-                        <h3><span class="tag is-primary">7 unread</span> <a href="question.html">Forum post
-                                title with a complex and long question</a></h3>
+                        {{#each topic}}
+                        <h3><span class="tag is-primary">7 unread</span> <a href="question.html">{{this.title}}</a></h3>
                         <div class="small">Go to page: <a href="#0">1</a>, <a href="#0">2</a>, <a href="#0">3</a>
                             &hellip; <a href="#0">7</a>, <a href="#0">8</a>, <a href="#0">9</a></div>
                     </td>
                     <td>
-                        <div>by <a href="#">Author name</a></div>
+                        <div>by <a href="#">{{this.poster_id}}</a></div>
                         <div>12 Apr 2022, 13:46</div>
                     </td>
+                    {{/each}}
                     <td>
                         <div>5 replies</div>
                         <div>179 views</div>

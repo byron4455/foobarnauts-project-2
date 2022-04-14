@@ -17,7 +17,14 @@ module.exports = (db) => {
         text: 'Sample item',
         description: 'Adam can\'t see this',
         UserId: 2
-      });
+      }).then(() => {
+        db.Topic.create({
+          id: 1,
+          title: 'Why I want a Tesla - A Love Letter',
+          poster_id: 1,
+        content: 'First of all, who doesnt',
+        })
+      })
     });
   });
 };
