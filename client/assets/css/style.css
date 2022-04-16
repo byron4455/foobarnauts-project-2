@@ -42,7 +42,7 @@
   }
 
   /* SIGN UP FORM */
-  .sign-up-form{
+  /* .sign-up-form{
     width: 100%;
     height: 100vh;
     font-family: sans-serif;
@@ -147,7 +147,7 @@
     text-align: center;
     font-size: 20px;
     margin-top: 8px;
-  }
+  } */
 
   /* NEW POST BUTTON */
   .new-post .columns {
@@ -166,7 +166,7 @@
     font-weight: 700;
   }
   /* NEW POST BUTTON */
-  .button.is-primary.is-alt {
+  /* .button.is-primary.is-alt {
     background: #00c6ff;
     background: -webkit-linear-gradient(to bottom, #0072ff, #00c6ff);
     background: linear-gradient(to bottom, #0072ff, #00c6ff);
@@ -176,7 +176,7 @@
     line-height: 2.8;
     margin: 9px;
   
-  }
+  } */
   /* STYLING FOR COMMENTERS PHOTOS */
   .media-left img {
     border-radius: 50%;
@@ -200,7 +200,21 @@
   .menu-list li{
     padding: 5px;
   }
-  
+  .forum-col {
+    min-width: 16em;
+  }
+
+  .last-post-col {
+    min-width: 12em;
+  }
+
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }  
   
 
 
