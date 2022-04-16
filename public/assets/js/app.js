@@ -132,7 +132,7 @@ $('#login').on('click', function (event) {
   });
 });
 
-window.onload = function() {
+
 // LOG IN/REGISTRATION FORM
 let card = document.getElementById ("card");
 let usernameButton = document.getElementById('username');
@@ -217,4 +217,3 @@ function lsRememberMe() {
   // modalClose.onclick = function() {
   //   deleteModal.style.display = 'none';
   // }
-};

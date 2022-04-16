@@ -20,6 +20,7 @@ module.exports = (passport, db) => {
   router.get('/topic', ensureAuthenticated, AppController.getExamples);
   router.get('/discussion', ensureAuthenticated);
   router.get('/about');
+  router.get('/research', ensureAuthenticated);
 
   return router;
 };

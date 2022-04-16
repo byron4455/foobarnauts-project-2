@@ -17,6 +17,24 @@ module.exports = (db) => {
   //     res.redirect('dashboard');
   //   }
   // });
+  router.get('/research', (req, res) => {
+    if (req.isAuthenticated()) {
+      db.User.findOne({
+        where: {
+          id: req.session.passport.user.id
+        }
+      }).then(() => {
+        const user = {
+          userInfo: req.session.passport.user,
+          isloggedin: req.isAuthenticated()
+        };
+        // console.log(user);
+        res.render('research', user);
+      });
+    } else {
+      res.redirect('/');
+    }
+  });
   router.get('/about', (req, res) => {
     if (req.isAuthenticated()) {
       db.User.findOne({
