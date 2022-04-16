@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Topic = sequelize.define('Topic', {
+  const Thread = sequelize.define('Thread', {
       id: {
           type: DataTypes.INTEGER,
           autoIncrement: true,
@@ -21,14 +21,14 @@ module.exports = (sequelize, DataTypes) => {
       hooks: {}
   });
 
-  Topic.associate = (models) => {
-    Topic.belongsTo(models.User, {
+  Thread.associate = (models) => {
+    Thread.belongsTo(models.User, {
     }),
-    Topic.hasMany(models.Comment, {
+    Thread.hasMany(models.Comment, {
         foreignKey: 'in_topic',
         onDelete: 'cascade'
     })
   };
 
-  return Topic;
+  return Thread;
 }

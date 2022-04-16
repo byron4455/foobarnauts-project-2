@@ -21,31 +21,32 @@ module.exports = function (db) {
       });
     },
     // Get all Topics
-    getTopics: function (req, res) {
-      db.Topic.findAll({
-                        order: [['createdAt', 'DESC']],
-                        attributes:[
-                          'id',
-                          'title',
-                          'createdAt',
-                          'content'
-                        ],
-                        include:[
-                          {
-                            model: User,
-                            attributes: ['firstName']
-                          },
-                          {
-                            model: Comment,
-                            attributes: ['id', 'content', 'in_topic', 'poster_id', 'createdAt'],
-                            include:{
-                              model: user,
-                              attributes: ['firstName']
-                            }
+    getThreads: function (req, res) {
+      db.Thread.findAll(
+        {
+            order: [['createdAt', 'DESC']],
+            attributes:[
+              'id',
+              'title',
+              'createdAt',
+              'content'
+            ],
+            include:[
+              {
+                model: User,
+                attributes: ['firstName']
+              },
+              {
+                model: Comment,
+                attributes: ['id', 'content', 'in_topic', 'poster_id', 'createdAt'],
+                include:{
+                  model: user,
+                  attributes: ['firstName']
+                }
 
-                          }
-                        ]
-                      });
-    }
+              }
+            ]
+          });
+  }
   };
 };

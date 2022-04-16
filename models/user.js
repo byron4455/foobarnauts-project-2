@@ -46,7 +46,7 @@ module.exports = function (sequelize, DataTypes) {
     User.hasMany(models.Example, {
       onDelete: 'cascade'
     });
-    User.hasMany(models.Topic, {
+    User.hasMany(models.Thread, {
       foreignKey: 'poster_id'
     });
     User.hasMany(models.Comment, {

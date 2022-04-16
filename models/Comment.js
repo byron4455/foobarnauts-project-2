@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
       Comment.belongsTo(models.User,{
           
       });
-      Comment.belongsTo(models.Topic,{
+      Comment.belongsTo(models.Thread,{
           onDelete: 'cascade'
       });
     };
