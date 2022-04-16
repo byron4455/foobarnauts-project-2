@@ -1,0 +1,15 @@
+/* NAVIGATION */
+.navbar{
+    background-color: #09255c;
+  }
+  .navbar-menu, .logo{
+    padding: 0 2rem;
+    display: flex;
+  }
+  .navbar-brand{
+    position: relative;
+    width:300px;
+    left: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
