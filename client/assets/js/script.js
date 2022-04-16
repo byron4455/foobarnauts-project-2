@@ -1,6 +1,6 @@
 // LOG IN/REGISTRATION FORM
 let card = document.getElementById ("card");
-let usernameButton = document.getElementById('username');
+let usernameButton = document.getElementById('signIn');
 let loginModal = document.getElementById('loginModal');
 let close = document.getElementsByClassName('modal-close')[0];
 
@@ -52,3 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
   });
+
+
+
+
+
+
+
+
+
+
+
+	
