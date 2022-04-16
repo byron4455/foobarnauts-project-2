@@ -18,6 +18,8 @@ module.exports = (passport, db) => {
   router.post('/examples', AppController.createExample);
   router.delete('/examples/:id', AppController.deleteExample);
   router.get('/topic', ensureAuthenticated, AppController.getExamples);
+  router.get('/discussion', ensureAuthenticated);
+  router.get('/about');
 
   return router;
 };

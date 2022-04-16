@@ -1,7 +1,4 @@
-
-
 {{> nav/nav-block}} 
-{{> modal/login-block}}
 <section id="main-container" class="section">
   <div class="jumbotron text-center header-wrap" align="center">
     <p class="lead">Welcome to <strong>Plugged In!</strong></p>
@@ -9,10 +6,14 @@
       After Registration, you will be able to post and comment on various forums, 
       all aimed towards electric vehicles.</p>
     <hr class="my-4">
-    <div>
       {{#if isloggedin}}
         You are logged in as {{user.firstName}}
-        <a href="/logout"> <button type="btn" class="btn">Logout</button></a>
+    <div class="logout">
+        <a class="button-dashboard" href="newpost">New Post</a>
+        <a class="button-dashboard" href="profile">Profile</a>
+        <a class="button-dashboard" href="discussion">Discussion</a>
+        <button type="btn" class="button-dashboard" id="logout-button">Logout</button>
+        </div>
       {{else}}
       <div class="tile is-parent is-vertical">
       <article class="tile is-child notification is-danger is-vertical"id="maintile">
@@ -22,7 +23,7 @@
         </div>
       {{/if}}
       <h5 id="login-err-msg"></h5>
-    </div>
+    
   </div>
 </section>
 

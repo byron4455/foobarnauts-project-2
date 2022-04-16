@@ -17,6 +17,43 @@ module.exports = (db) => {
   //     res.redirect('dashboard');
   //   }
   // });
+  router.get('/about', (req, res) => {
+    if (req.isAuthenticated()) {
+      db.User.findOne({
+        where: {
+          id: req.session.passport.user.id
+        }
+      }).then(() => {
+        const user = {
+          userInfo: req.session.passport.user,
+          isloggedin: req.isAuthenticated()
+        };
+        // console.log(user);
+        res.render('about', user);
+      });
+    } else {
+      res.redirect('/');
+    }
+  });
+
+  router.get('/discussion', (req, res) => {
+    if (req.isAuthenticated()) {
+      db.User.findOne({
+        where: {
+          id: req.session.passport.user.id
+        }
+      }).then(() => {
+        const user = {
+          userInfo: req.session.passport.user,
+          isloggedin: req.isAuthenticated()
+        };
+        // console.log(user);
+        res.render('discussion', user);
+      });
+    } else {
+      res.redirect('/');
+    }
+  });
   router.get('/newpost', (req, res) => {
     if (req.isAuthenticated()) {
       db.User.findOne({

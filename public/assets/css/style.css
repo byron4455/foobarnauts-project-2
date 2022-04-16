@@ -1,117 +1,42 @@
-/* body {
-  color: white;
-  background-size: cover;
-  height:100%
-}
-
-.jumbotron {
-  background: rgba(0,0,0,0);
-}
-
-.modal {
-  color: black;
-}
-
-.btn {
-  color:white;
-  background:#cadde1;
-  border: 1px solid white;
-}
-
-#user-form, .header-wrap, #create-form, .create-user-wrap {
-  padding: 20px;
-  border-radius: 15px;
-  margin: 20px 0;
-}
-
-#update-err-msg,
-#login-err-msg,
-#create-err-msg {
-  color: red !important;
-}
-
-#go-home {
- width: auto;
- height: 65px;
-}
-
-.container {
-  padding-bottom: 2%;
-  margin-top: 10%;
-  background: rgba(86, 101, 115,.6);
-  height:100%;
-  border-radius: .25rem;
-  margin-bottom: 2%;
-  width: 600px;
-}
-
-[data-useremail="true"] {
-  color: white !important;
-}
-[data-register="true"] {
-  color: white !important;
-}
-
-.lead {
-  font-size: 1.8rem;
-  font-weight: 500;
-}
-
-.userId h2, .header-wrap h1 {
-  text-transform: capitalize;
-}
-
-hr {
-  background-color: #fff !important;
-}
-
-.list-group-item {
-  line-height: 2.5;
-}
-
-.card-body {
-  color: #444;
-} */
-
 html,body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  /* background: #F2F6FA; */
 }
-
 .navbar{
-  background-color: rgb(11, 27, 1);
+  background-color: #54b1f0 !important;
 }
- /* MAKE CENTER ON SMALL SCREENS WITH MEDIA */
- .navbar-menu, .logo{
+a {
+  color: black;
+}
+.navbar-menu, .logo{
   padding: 0 2rem;
   display: flex;
-  justify-content: flex-end;
-  /* align-items: center; */
-} 
-/* #hero{
-  width:100%;
-  height:50vh;
-  background-size: contain ; 
- background-repeat: no-repeat;  
-}    */
+}
+.navbar-brand{
+  position: relative;
+  width:100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* LOG IN BUTTON */
+/* .button.is-primary {
+  background-color: var(--button);
+  border-color: transparent;
+  color: #fff;
+} */
+   
+/* SEARCH BAR */
+.field.has-addons {
+  justify-content: right;
+  padding-top: 2%;
+}
 
 /* OG HERO IMG */
 .hero-img{
   width: 100%;
-  height:60vh;
+  height:45vh;
   object-fit: cover;
 }   
-/* HERO IMG TOPICS.HTML 
-.hero-img2{
-  width:100a%;
-  height:70vh;
-  object-fit: cover;
-}   
-/* FORM & SEARCH BAR */
-.field.has-addons {
-  /* display: flex; */
-  justify-content: right;
-}
 
 /* SIGN UP FORM */
 .sign-up-form{
@@ -143,8 +68,8 @@ html,body {
 }
 .card-front, .card-back{
   position: absolute;
-  width:auto;
-  height:110%;
+  width: 100%;
+  height: 100%;
   background-position: center;
   background-image: url('/public/assets/images/nightrider.png'); 
   padding: 5%;
@@ -160,6 +85,16 @@ html,body {
   text-align: center;
   margin-bottom: 20px;
   color:#fff;
+}
+.card p{
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+  /* margin-bottom: 2px; */
+  color:#fff;
+}
+.card label{
+  font-size: 10px;
 }
 .input-box{
   width: 100%;
@@ -180,7 +115,7 @@ html,body {
 }
 button{
   width: 100%;
-  background-color: rgb(63, 93, 119);
+  background:transparent;
   border: 1px solid #fff;
   margin: 35px 0 10px;
   height: 32px;
@@ -190,7 +125,8 @@ button{
   box-sizing: border-box;
   outline: none;
   color: #fff;
-}
+  cursor: pointer
+}  
 #cancel {
   width: 100%;
   background-color: rgb(141, 0, 0);
@@ -202,6 +138,7 @@ button{
 }
 .submit-btn{
   position: relative;
+
 }
 .submit-btn::after{
   color: #333;
@@ -210,7 +147,7 @@ button{
   height: 32px;
   width: 32px;
   border-radius: 50%;
-  background:rgb(46, 190, 142);
+  background:rgb(75, 177, 190);
   position:absolute;
   right: -1px;
   top: -1px;
@@ -260,15 +197,8 @@ aside.menu .menu-label {
   margin: 9px;
 
 }
-#choice {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.options {
-  width: 450px;
-  padding-right: 50px;
-}
+
+
 /* STYLING FOR COMMENTERS PHOTOS */
 .media-left img {
   border-radius: 50%;
@@ -304,4 +234,89 @@ article.post:last-child {
   margin: 0px;
   padding: 3px;
   
+}
+.author-col {
+  min-width: 12em;
+}
+.post-col {
+  min-width: 20em;
+}
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.pagination {
+  margin-bottom: 1.5rem;
+}
+.forum-col {
+  min-width: 16em;
+}
+.last-post-col {
+  min-width: 12em;
+}
+.footer {
+  background-color: #fafafa;
+  max-height: 20px;
+  margin-top: 6%;
+  height: 20px;
+}
+#choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 450px;
+}
+#update-user:hover {
+  background-color: rgb(95, 236, 95);
+} 
+.button {
+  border-color: #0072ff;
+  border-width: 2px;
+}
+#view-user:hover {
+  background-color: #00c6ff;
+}
+
+#delete-user:hover {
+  background-color: red;
+}
+.profile-text {
+  font-size: 15px;
+  padding: 10px;
+}
+.logout {
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.button-dashboard {
+  width: 100%;
+  background: white;
+  border: 1px solid black;
+  margin: 35px 0 10px;
+  padding: 0 10px;
+  /* box-sizing: border-box; */
+  outline: none;
+  color: black;
+  cursor: pointer;
+  align-items: center;
+  border: 1px solid blue;
+  justify-content: center;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.5em;
+}
+.button-dashboard:hover {
+  background-color: #54b1f0;
 }

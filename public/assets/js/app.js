@@ -53,7 +53,10 @@ $('#update-user').on('click', function (event) {
     $('#update-err-msg').empty('').text('**Please fill out entire form**');
   }
 });
-
+$('#logout-button').on('click', function (event) {
+  event.preventDefault();
+  window.location.href = '/logout';
+});
 // DELETE   ***************************************************
 $('#delete-user').on('click', function (event) {
   event.preventDefault();
@@ -129,43 +132,51 @@ $('#login').on('click', function (event) {
   });
 });
 
+window.onload = function() {
 // LOG IN/REGISTRATION FORM
 let card = document.getElementById ("card");
 let usernameButton = document.getElementById('username');
 let loginModal = document.getElementById('loginModal');
 let close = document.getElementsByClassName('modal-close')[0];
+let deleteModal = document.getElementById('delete-user-modal');
+let deleteButton = document.getElementById('delete-user');
+let modalClose = document.getElementById('closeModal');
 
+
+usernameButton.onclick = function() {
+  loginModal.style.display = 'block';
+}
 // ROTATES LOGIN FORM TO REGISTER FORM
 function openRegister(){
-    card.style.transform ="rotateY(-180deg)";
-
+  card.style.transform ="rotateY(-180deg)";
+  
 }
 function openLogin(){
-    card.style.transform ="rotateY(0deg)";
+  card.style.transform ="rotateY(0deg)";
 }
 // TARGET LOGIN BUTTON & MODAL
-usernameButton.onclick = function() {
-   loginModal.style.display = 'block';
-}
 
-close.onclick =function(){
-    loginModal.style.display ='none';
+close.onclick = function(){
+  loginModal.style.display ='none';
 }
 // ALLOWS MODAL TO CLOSE BY CLICIING ANY SPACE OUTSIDE OF FORM
 window.onclick = function(event){
-if (event.target.className == 'sign-up-form'){
+  if (event.target.className == 'sign-up-form'){
     loginModal.style.display ='none';
+  }
 }
-}
-// NAVBAR BURGER
-document.addEventListener('DOMContentLoaded', () => {
-
+// deleteButton.onclick = function() {
+  //   deleteModal.style.display = 'block';
+  // };
+  // NAVBAR BURGER
+  document.addEventListener('DOMContentLoaded', () => {
+    
     // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-  
+    
     // Check if there are any navbar burgers
     if ($navbarBurgers.length > 0) {
-  
+      
       // Add a click event on each of them
       $navbarBurgers.forEach( el => {
         el.addEventListener('click', () => {
@@ -177,11 +188,11 @@ document.addEventListener('DOMContentLoaded', () => {
           // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
           el.classList.toggle('is-active');
           $target.classList.toggle('is-active');
-  
+          
         });
       });
     }
-  
+    
   });
   const rmCheck = document.getElementById("rememberMe"),
     emailInput = document.getElementById("email");
@@ -202,4 +213,8 @@ function lsRememberMe() {
     localStorage.username = "";
     localStorage.checkbox = "";
   }
+};
+  // modalClose.onclick = function() {
+  //   deleteModal.style.display = 'none';
+  // }
 };
