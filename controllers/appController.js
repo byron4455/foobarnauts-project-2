@@ -29,19 +29,20 @@ module.exports = function (db) {
               'id',
               'title',
               'createdAt',
+              'poster_id',
               'content'
             ],
             include:[
               {
                 model: User,
-                attributes: ['firstName']
+                attributes: ['username']
               },
               {
                 model: Comment,
                 attributes: ['id', 'content', 'in_post', 'poster_id', 'createdAt'],
                 include:{
                   model: user,
-                  attributes: ['firstName']
+                  attributes: ['username']
                 }
 
               }
