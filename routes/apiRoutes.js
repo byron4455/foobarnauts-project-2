@@ -17,6 +17,10 @@ module.exports = (passport, db) => {
   router.get('/examples', AppController.getExamples);
   router.post('/examples', AppController.createExample);
   router.delete('/examples/:id', AppController.deleteExample);
+  //@TODO implement getters
+  router.get('/threads');
+  router.get('/threads/:id');
+  router.post('/threads', ensureAuthenticated);
 
   return router;
 };

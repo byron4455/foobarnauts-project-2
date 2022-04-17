@@ -21,8 +21,8 @@ module.exports = function (db) {
       });
     },
     // Get all Topics
-    getThreads: function (req, res) {
-      db.Thread.findAll(
+    getPosts: function (req, res) {
+      db.Post.findAll(
         {
             order: [['createdAt', 'DESC']],
             attributes:[
@@ -38,7 +38,7 @@ module.exports = function (db) {
               },
               {
                 model: Comment,
-                attributes: ['id', 'content', 'in_topic', 'poster_id', 'createdAt'],
+                attributes: ['id', 'content', 'in_post', 'poster_id', 'createdAt'],
                 include:{
                   model: user,
                   attributes: ['firstName']

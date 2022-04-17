@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        in_topic:{
+        in_post:{
             type: DataTypes.INTEGER,
             allowNull: false
         },
@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
       Comment.belongsTo(models.User,{
           
       });
-      Comment.belongsTo(models.Thread,{
+      Comment.belongsTo(models.Post,{
           onDelete: 'cascade'
       });
     };
