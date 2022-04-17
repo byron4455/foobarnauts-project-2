@@ -48,6 +48,43 @@ module.exports = function (db) {
               }
             ]
           });
+    },
+
+    //get a single post by id
+    getSinglePost: function (req, res){
+      db.Post.findOne({
+        where: {
+          id: req.params.id
+        },
+        include: [
+          {
+            model: Comment,
+            attributes: ['id', 'content', 'in_post', 'poster_id', 'createdAt'],
+            include:{
+              model: user,
+              attributes: ['username']
+            }
+
+          }
+        ]
+      });
+    },
+
+    setAPost: function (req, res){
+      if(req.session){
+        db.Post.create({
+          title: req.body.title,
+          poster_id: req.session.user_id,
+          content: req.body.content
+          })
+        .then( dbPostData => res.json(dbPostData) )
+        .catch(err => {
+          console.log(err);
+          res.status(400).json(err);
+          });
+      };
+    }
+
+  //return close  
   }
-  };
 };

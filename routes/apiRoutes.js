@@ -18,9 +18,9 @@ module.exports = (passport, db) => {
   router.post('/examples', AppController.createExample);
   router.delete('/examples/:id', AppController.deleteExample);
   //@TODO implement getters
-  router.get('/posts');
-  router.get('/posts/:id');
-  router.post('/posts', ensureAuthenticated);
+  router.get('/posts', AppController.getPosts);
+  router.get('/posts/:id', AppController.getSinglePost);
+  router.post('/posts', AppController.setAPost);
 
   return router;
 };
