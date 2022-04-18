@@ -130,6 +130,7 @@ $('#login').on('click', function (event) {
       $('#user-info').modal('hide');
     }
   });
+<<<<<<< HEAD:public/assets/js/app.js
 });
 
 
@@ -217,3 +218,6 @@ function lsRememberMe() {
   // modalClose.onclick = function() {
   //   deleteModal.style.display = 'none';
   // }
+=======
+});
+>>>>>>> f5e518b368302b55222b2b12661a69c7c999e937:client/assets/js/app.js

@@ -1,5 +1,8 @@
 # Plugged In! Electric Vehicle Forum
 ## Description
+
+Research and discuss trends in electic vehicles with like minded enthusiasts on this forum. Ask questions, and get fellow electric car enthusiasts opinnions as you search for you perfect car.
+
 ## Table of Contents
 
   * [Installation](#installation)
