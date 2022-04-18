@@ -1,3 +1,5 @@
+require = config
+const token = config.api_key;
 $('#research').on('click', function (event) {
     event.preventDefault();
     getCar();
@@ -19,7 +21,7 @@ var model = document.getElementById('vehiclesearch').value;
 $.ajax({
     method: 'GET',
     url: 'https://api.api-ninjas.com/v1/cars?limit=10&make=' + model,
-    headers: { 'X-Api-Key': 'LkwDtvOlGX7sg0uRN++1Jw==tIoYlmMKJ9jSCm71'},
+    headers: { 'X-Api-Key': token},
     contentType: 'application/json',
     success: function(result) {
         console.log(result);
@@ -40,7 +42,7 @@ getEV = function() {
     $.ajax({
         method: 'GET',
         url: 'https://api.api-ninjas.com/v1/cars?limit=30&fuel_type=electricity',
-        headers: { 'X-Api-Key': 'LkwDtvOlGX7sg0uRN++1Jw==tIoYlmMKJ9jSCm71'},
+        headers: { 'X-Api-Key': token},
         contentType: 'application/json',
         success: function(result) {
             console.log(result);
