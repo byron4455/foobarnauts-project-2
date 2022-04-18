@@ -40,6 +40,7 @@ module.exports = function (db) {
               {
                 model: Comment,
                 attributes: ['id', 'content', 'in_post', 'poster_id', 'createdAt'],
+                order: [['createdAt', 'DESC']],
                 include:{
                   model: user,
                   attributes: ['username']
@@ -60,6 +61,7 @@ module.exports = function (db) {
           {
             model: Comment,
             attributes: ['id', 'content', 'in_post', 'poster_id', 'createdAt'],
+            order: [['createdAt', 'DESC']],
             include:{
               model: user,
               attributes: ['username']

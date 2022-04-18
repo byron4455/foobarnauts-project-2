@@ -27,6 +27,9 @@ module.exports = (sequelize, DataTypes) => {
     Post.hasMany(models.Comment, {
         foreignKey: 'in_post',
         onDelete: 'cascade'
+    }),
+    Post.belongsToMany(models.Topic, {
+        through: 'Post_Topics'
     })
   };
 

@@ -17,10 +17,12 @@ module.exports = (passport, db) => {
   router.get('/examples', AppController.getExamples);
   router.post('/examples', AppController.createExample);
   router.delete('/examples/:id', AppController.deleteExample);
-  //@TODO implement getters
+
   router.get('/posts', AppController.getPosts);
   router.get('/posts/:id', AppController.getSinglePost);
   router.post('/posts', AppController.setAPost);
+
+  
 
   return router;
 };
