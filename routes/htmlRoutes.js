@@ -17,6 +17,24 @@ module.exports = (db) => {
   //     res.redirect('dashboard');
   //   }
   // });
+  router.get('/index', (req, res) => {
+    if (req.isAuthenticated()) {
+      db.User.findOne({
+        where: {
+          id: req.session.passport.user.id
+        }
+      }).then(() => {
+        const user = {
+          userInfo: req.session.passport.user,
+          isloggedin: req.isAuthenticated()
+        };
+        // console.log(user);
+        res.render('index', user);
+      });
+    } else {
+      res.redirect('/');
+    }
+  });
   router.get('/research', (req, res) => {
     if (req.isAuthenticated()) {
       db.User.findOne({
@@ -90,9 +108,7 @@ module.exports = (db) => {
       res.redirect('/');
     }
   });
-
-
-  router.get('/topic', (req, res) => {
+  router.get('/forum-topics', (req, res) => {
     if (req.isAuthenticated()) {
       db.User.findOne({
         where: {
@@ -104,7 +120,26 @@ module.exports = (db) => {
           isloggedin: req.isAuthenticated()
         };
         // console.log(user);
-        res.render('topic', user);
+        res.render('forum-topics', user);
+      });
+    } else {
+      res.redirect('/');
+    }
+  });
+
+  router.get('/topic-outline', (req, res) => {
+    if (req.isAuthenticated()) {
+      db.User.findOne({
+        where: {
+          id: req.session.passport.user.id
+        }
+      }).then(() => {
+        const user = {
+          userInfo: req.session.passport.user,
+          isloggedin: req.isAuthenticated()
+        };
+        // console.log(user);
+        res.render('topic-outline', user);
       });
     } else {
       res.redirect('/');

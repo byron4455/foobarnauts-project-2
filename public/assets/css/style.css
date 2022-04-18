@@ -4,7 +4,7 @@ html,body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 .navbar{
-  background-color: #54b1f0 !important;
+  background-color: #334ee6 !important;
 }
 a {
   color: black;
@@ -19,7 +19,9 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
 }
-
+.navbar-item:hover {
+  background-color: #334ee6 !important;
+}
 /* LOG IN BUTTON */
 /* .button.is-primary {
   background-color: var(--button);
@@ -374,4 +376,33 @@ form.example::after {
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+tr, td {
+padding: 8px;
+}
+.searchvehicle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.vehiclecontainer {
+  display: flex;
+  justify-content: space-around;
+}
+.searchEVvehicle {
+  display: flex;
+  justify-content: space-around;
+}
+.about {
+  text-align: center;
+}
+.about-header {
+  text-align: center;
+  font-size: 35px;
+  padding-bottom: 10px;
 }

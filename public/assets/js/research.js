@@ -18,12 +18,18 @@ getCar = function() {
 var model = document.getElementById('vehiclesearch').value;                                     
 $.ajax({
     method: 'GET',
-    url: 'https://api.api-ninjas.com/v1/cars?model=' + model,
+    url: 'https://api.api-ninjas.com/v1/cars?limit=10&make=' + model,
     headers: { 'X-Api-Key': 'LkwDtvOlGX7sg0uRN++1Jw==tIoYlmMKJ9jSCm71'},
     contentType: 'application/json',
     success: function(result) {
         console.log(result);
-    },
+        var data = result;
+        for(var i=0; i<data.length; i++) {
+ 
+            var rn = $('#vehicleSearch');
+            rn.append('<tr><td>'+data[i].make.toUpperCase()+'</td><td>'+data[i].model.toUpperCase()+'</td><td>'+data[i].year+'</td><td>'+data[i].city_mpg+'</td><td>'+data[i].fuel_type.toUpperCase()+'</td></tr>');
+        }
+        },
     error: function ajaxError(jqXHR) {
         console.error('Error:');
     }
@@ -37,10 +43,16 @@ getEV = function() {
         headers: { 'X-Api-Key': 'LkwDtvOlGX7sg0uRN++1Jw==tIoYlmMKJ9jSCm71'},
         contentType: 'application/json',
         success: function(result) {
-            console.log(result[0]['l']);
-        },
+            console.log(result);
+            var data = result;
+             for(var i=0; i<data.length; i++) {
+
+                 var rn = $('#evvehicle');
+                 rn.append('<tr><td>'+data[i].make.toUpperCase()+'</td><td>'+data[i].model.toUpperCase()+'</td><td>'+data[i].year+'</td><td>'+data[i].city_mpg+'</td><td>'+data[i].fuel_type.toUpperCase()+'</td></tr>');
+             }
+            },
         error: function ajaxError(jqXHR) {
-            console.error('Error: ');
+            console.error('Error:');
         }
     });
     };
