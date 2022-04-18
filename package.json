@@ -9,7 +9,7 @@
     "fix": "eslint --fix .",
     "test": "npm run lint",
     "watch": "nodemon server.js",
-    "seed": "node seeds/index.js"
+    "seed": "node db/index.js"
   },
   "repository": {
     "type": "git",

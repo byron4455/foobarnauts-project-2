@@ -72,7 +72,8 @@ module.exports = function (db) {
       });
     },
 
-    setAPost: function (req, res){
+    // create a post
+    createPost: function (req, res){
       if(req.session){
         db.Post.create({
           title: req.body.title,
@@ -85,6 +86,21 @@ module.exports = function (db) {
           res.status(400).json(err);
           });
       };
+    },
+    //create a comment
+    createComment: function (req, res) {
+      if(req.session){
+        db.Comment.create({
+          poster_id : req.session.user_id,
+          in_post: req.body.post,
+          content: req.body.content
+        })
+        .then( dbPostData => res.json(dbPostData) )
+        .catch(err => {
+          console.log(err);
+          res.status(400).json(err);
+          });
+      }
     }
 
   //return close  

@@ -20,7 +20,9 @@ module.exports = (passport, db) => {
 
   router.get('/posts', AppController.getPosts);
   router.get('/posts/:id', AppController.getSinglePost);
-  router.post('/posts', AppController.setAPost);
+  router.post('/posts', ensureAuthenticated, AppController.createPost);
+
+  router.post('/comment', AppController.createComment)
 
   
 
