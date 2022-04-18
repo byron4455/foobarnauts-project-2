@@ -4,19 +4,21 @@ const seedComments = require('./comment-seeds');
 
 const sequelize = require('../config/config');
 
-const seedAll = async () => {
+const seedAll = async (db) => {
   await sequelize.sync({ force: true });
   console.log('\n----- DATABASE SYNCED -----\n');
 
   //seed users
-  seedUsers();+
+  await seedUsers(db);+
   console.log('\n----- USERS SEEDED -----\n');
 
 
   //seed posts
-  seedPosts();
+  await seedPosts(db);
   console.log('\n----- POSTS SEEDED -----\n');
 
 
   //seed comments
 }
+
+module.exports = seedAll;
