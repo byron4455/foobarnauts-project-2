@@ -41,6 +41,7 @@
     "connect-session-sequelize": "^7.0.3",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.6.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
     "express-session": "^1.17.2",
@@ -54,6 +55,7 @@
     "sequelize-cli": "^6.4.1"
   },
   "devDependencies": {
+    "@types/express-handlebars": "^6.0.0",
     "eslint": "^7.9.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-import": "2.22.0",

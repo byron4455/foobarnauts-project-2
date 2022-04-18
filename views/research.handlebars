@@ -1,0 +1,43 @@
+{{> nav/nav-block}} 
+
+<h1>RESEARCH</h1>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- The form -->
+<div class="searching"></div>
+<form class="example">
+  <input type="text" placeholder="Search.." id="vehiclesearch" name="search">
+  <button type="submit" id="research"><i class="fa fa-search"></i></button>
+</form>
+</div>
+<div class="vehiclecontainer">
+<div class="searchvehicle">
+    <table id="vehicleSearch">
+      <caption>All Vehicle Search</caption>
+  <tr>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Year</th>
+    <th>City MPG</th>
+    <th>Fuel Type</th>
+
+  </tr>
+  
+</table>
+</div>
+<div class="searchEVvehicle">
+    <table id="evvehicle">
+      <caption>Only Electric Vehicles</caption>
+  <tr>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Year</th>
+    <th>City MPG</th>
+    <th>Fuel Type</th>
+
+  </tr>
+  
+</table>
+</div>
+</div>
+<script src="assets/js/research.js"></script>

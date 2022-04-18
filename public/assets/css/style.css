@@ -1,0 +1,408 @@
+
+
+html,body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+.navbar{
+  background-color: #334ee6 !important;
+}
+a {
+  color: black;
+}
+.navbar-menu, .logo{
+  padding: 0 2rem;
+  display: flex;
+}
+.navbar-brand{
+  position: relative;
+  width:100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.navbar-item:hover {
+  background-color: #334ee6 !important;
+}
+/* LOG IN BUTTON */
+/* .button.is-primary {
+  background-color: var(--button);
+  border-color: transparent;
+  color: #fff;
+} */
+   
+/* SEARCH BAR */
+.field.has-addons {
+  justify-content: right;
+  padding-top: 2%;
+}
+
+/* OG HERO IMG */
+.hero-img{
+  width: 100%;
+  height:45vh;
+  object-fit: cover;
+}   
+
+/* SIGN UP FORM */
+.sign-up-form{
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+ background: transparent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  width: 380px;
+  height: 600px;
+  perspective:1000px ;
+  background-color: #c57676;
+}
+
+.modal-content {
+  overflow: hidden;
+}
+.inner-box{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.card-front, .card-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-image: url('/public/assets/images/nightrider.png'); 
+  padding: 5%;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+}
+.card-back{
+  transform: rotateY(180deg);
+}
+.card h2{
+  font-weight: normal;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color:#fff;
+}
+.card p{
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+  /* margin-bottom: 2px; */
+  color:#fff;
+}
+.card label{
+  font-size: 10px;
+}
+.input-box{
+  width: 100%;
+  background-color: #5783b9;
+  border: 1px solid #fff;
+  margin: 6px 0;
+  height: 32px;
+  border-radius:20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  outline: none;
+  text-align: center;
+  color: #fff;
+}
+::placeholder{
+  color:#fff;
+  font-size: 12px;
+}
+button{
+  width: 100%;
+  background:transparent;
+  border: 1px solid #fff;
+  margin: 35px 0 10px;
+  height: 32px;
+  font-size: 12px;
+  border-radius:20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  outline: none;
+  color: #fff;
+  cursor: pointer
+}  
+#cancel {
+  width: 100%;
+  background-color: rgb(141, 0, 0);
+  border-width: 1px;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+.submit-btn{
+  position: relative;
+
+}
+.submit-btn::after{
+  color: #333;
+  line-height: 32px;
+  font-size: 17px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background:rgb(75, 177, 190);
+  position:absolute;
+  right: -1px;
+  top: -1px;
+}
+span{
+  font-size:13px;
+  margin-left: 10px;
+  color: #fff;
+}
+.card-btn{
+  margin-top: 70px;
+}
+.card a{
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  margin-top: -3px;
+}
+
+/* NEW POST BUTTON */
+.new-post .columns {
+  margin: 3rem 0;
+}
+/* TAGS */ 
+
+aside.menu {
+  padding-top: 3rem;
+}
+aside.menu .menu-list {
+  line-height: 1.5;
+}
+aside.menu .menu-label {
+  padding-left: 10px;
+  font-weight: 700;
+}
+/* NEW POST BUTTON */
+.button.is-primary.is-alt {
+  background: #00c6ff;
+  background: -webkit-linear-gradient(to bottom, #0072ff, #00c6ff);
+  background: linear-gradient(to bottom, #0072ff, #00c6ff);
+  font-weight: 700;
+  font-size: 14px;
+  height: 3rem;
+  line-height: 2.8;
+  margin: 9px;
+
+}
+
+
+/* STYLING FOR COMMENTERS PHOTOS */
+.media-left img {
+  border-radius: 50%;
+}
+/* STYLING FOR FORUM POST ON LANDING */
+.media-content p {
+  font-size: 14px;
+  line-height: 2.3;
+  font-weight: 700;
+  color: #8F99A3;
+}
+article.post {
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #E6EAEE;
+}
+article.post:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.menu-list li{
+  padding: 5px;
+}
+.tile {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.main-tile {
+  font-size: 15px;
+}
+.logo {
+  margin: 0px;
+  padding: 3px;
+  
+}
+.author-col {
+  min-width: 12em;
+}
+.post-col {
+  min-width: 20em;
+}
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.pagination {
+  margin-bottom: 1.5rem;
+}
+.forum-col {
+  min-width: 16em;
+}
+.last-post-col {
+  min-width: 12em;
+}
+.footer {
+  background-color: #fafafa;
+  max-height: 20px;
+  margin-top: 6%;
+  height: 20px;
+}
+#choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 450px;
+}
+#update-user:hover {
+  background-color: rgb(95, 236, 95);
+} 
+.button {
+  border-color: #0072ff;
+  border-width: 2px;
+}
+#view-user:hover {
+  background-color: #00c6ff;
+}
+
+#delete-user:hover {
+  background-color: red;
+}
+.profile-text {
+  font-size: 15px;
+  padding: 10px;
+}
+.logout {
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.button-dashboard {
+  width: 100%;
+  background: white;
+  border: 1px solid black;
+  margin: 35px 0 10px;
+  padding: 0 10px;
+  /* box-sizing: border-box; */
+  outline: none;
+  color: black;
+  cursor: pointer;
+  align-items: center;
+  border: 1px solid blue;
+  justify-content: center;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.5em;
+}
+.button-dashboard:hover {
+  background-color: #54b1f0;
+}
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 50%;
+  background: #ffffff;
+}
+input {
+  color: black;
+}
+::placeholder {
+  font-size: 15px;
+  color: black;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 5%;
+  padding: 4px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 10px;
+
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.searching {
+  display: flex;
+  flex-direction: row;
+}
+.example {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+tr, td {
+padding: 8px;
+}
+.searchvehicle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.vehiclecontainer {
+  display: flex;
+  justify-content: space-around;
+}
+.searchEVvehicle {
+  display: flex;
+  justify-content: space-around;
+}
+.about {
+  text-align: center;
+}
+.about-header {
+  text-align: center;
+  font-size: 35px;
+  padding-bottom: 10px;
+}

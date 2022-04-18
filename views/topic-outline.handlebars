@@ -1,10 +1,9 @@
-{{> nav/nav-block}}
- <div class="hero">
-        <img src="/public/assets/images/charging.png" class="hero-img"
-            alt="Photo of electric vehicle at a charging station.">
-    </div>
+    {{> nav/nav-block }}
+    <!-- HERO IMG -->
+   
 
-    <h2 class="title">Forum name</h2>
+
+       <h2 class="title">Forum name</h2>
     <div class="table-responsive">
         <table class="table is-striped is-bordered is-fullwidth">
             <thead>
@@ -18,7 +17,7 @@
             <tbody>
                 <tr>
                     <td>
-                        <h3><span class="tag is-primary">7 unread</span> <a href="question.html">Forum post
+                        <h3><span class="tag is-primary">7 unread</span> <a href="discussion">Forum post
                                 title with a complex and long question</a></h3>
                         <div class="small">Go to page: <a href="#0">1</a>, <a href="#0">2</a>, <a href="#0">3</a>
                             &hellip; <a href="#0">7</a>, <a href="#0">8</a>, <a href="#0">9</a></div>
@@ -39,7 +38,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><span class="tag is-primary">4 unread</span> <a href="question.html">Forum post
+                        <h3><span class="tag is-primary">4 unread</span> <a href="discussion">Forum post
                                 title
                                 with a complex and long question</a></h3>
                         <div class="small">Go to page: <a href="#0">1</a>, <a href="#0">2</a>, <a href="#0">3</a>
@@ -61,7 +60,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><span class="tag is-primary">1 unread</span> <a href="question.html">Forum post
+                        <h3><span class="tag is-primary">1 unread</span> <a href="discussion">Forum post
                                 title
                                 with a complex and long question</a></h3>
                         <div class="small">Go to page: <a href="#0">1</a>, <a href="#0">2</a>, <a href="#0">3</a>
@@ -83,7 +82,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><a href="question.html">Forum post title with a complex and long question</a></h3>
+                        <h3><a href="discussion">Forum post title with a complex and long question</a></h3>
                     </td>
                     <td>
                         <div>by <a href="#">Author name</a></div>
@@ -101,7 +100,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><a href="question.html">Forum post title with a complex and long question</a></h3>
+                        <h3><a href="discussion">Forum post title with a complex and long question</a></h3>
                     </td>
                     <td>
                         <div>by <a href="#">Author name</a></div>
@@ -119,7 +118,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><a href="question.html">Forum post title with a complex and long question</a></h3>
+                        <h3><a href="discussion">Forum post title with a complex and long question</a></h3>
                     </td>
                     <td>
                         <div>by <a href="#">Author name</a></div>
@@ -137,7 +136,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><a href="question.html">Forum post title with a complex and long question</a></h3>
+                        <h3><a href="discussion">Forum post title with a complex and long question</a></h3>
                     </td>
                     <td>
                         <div>by <a href="#">Author name</a></div>
@@ -155,7 +154,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><a href="question.html">Forum post title with a complex and long question</a></h3>
+                        <h3><a href="discussion">Forum post title with a complex and long question</a></h3>
                     </td>
                     <td>
                         <div>by <a href="#">Author name</a></div>
@@ -173,7 +172,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><a href="question.html">Forum post title with a complex and long question</a></h3>
+                        <h3><a href="discussion">Forum post title with a complex and long question</a></h3>
                     </td>
                     <td>
                         <div>by <a href="#">Author name</a></div>
@@ -191,7 +190,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3><a href="question.html">Forum post title with a complex and long question</a></h3>
+                        <h3><a href="discussion">Forum post title with a complex and long question</a></h3>
                     </td>
                     <td>
                         <div>by <a href="#">Author name</a></div>
@@ -223,41 +222,12 @@
             <li><a class="pagination-link" aria-label="Goto page 31">31</a></li>
         </ul>
     </nav>
-    <a href="new-post.html" class="button is-large is-primary">New topic</a>
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h2>{{msg}}</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h4>Examples belong to this user:</h4>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
+    <a href="newpost" class="button is-large is-primary">New topic</a>
     </div>
-  </div>
-</div>
+    </section>
+    <script src="/assets/js/example.js"></script>
 
-<script src="/assets/js/example.js"></script>
-
-{{!-- {{> modal/login-block}} --}}
-
-<script>
+    <script>
   var userId = {{userInfo.id}};
 </script>
+{{> modal/login-block}}

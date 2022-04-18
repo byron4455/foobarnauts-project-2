@@ -1,35 +1,70 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-  <!-- Brand/logo -->
-  <a class="navbar-brand" href="/">
-    AppName
-  </a>
-  
-  <!-- Links -->
-  <ul class="nav navbar-nav ml-auto">
+<nav class="navbar is-grey-light" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="logo" href="/">
+        <img src="/assets/images/logo.png" width="82" height="28" alt="Pulgged In Logo">
 
-    {{!-- <li class="nav-item">
-      <a class="nav-link" href="/some-feature">Menu item here</a>
-    </li> --}}
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    
+          {{#if isloggedin}}
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item has-text-white" href="index">
+            Dashboard
+          </a>
+        
 
-    {{#if isloggedin}}
-      <li class="nav-item">
-        <a class="nav-link" href="/example">Example page</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/profile">My Profile</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/logout">Logout</a>
-      </li>
-    {{else}}
-      <li class="nav-item">
-        <a class="nav-link" href="/profile" id="login-modal">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/register" data-register={{register}}>Register</a>
-      </li>
-    {{/if}}
-  </ul>
-</nav>
+            
+              <a class="navbar-item has-text-white" href="research">
+                Research
+              </a>
+              <a class="navbar-item has-text-white" href="about">
+                About
+              </a>
+              <a class="navbar-item has-text-white">
+                Contact
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item has-text-white">
+                Report an issue
+              </a>
+              <div class="navbar-end">
+          </div>
+          
+          </div>
+        </div>
+        </div>
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-danger is-rounded" id="logout-button">
+            <strong>Logout</strong>
+          </a>
+          </div>
+        </nav>
+          </div>
+      {{else}}
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-danger is-rounded" id="username">
+            <strong>Log in</strong>
+          </a>
+          </div>
+          </div>
+          </div>
+          </nav>
+            {{/if}}
+           <div class="hero">
+        <img src="/assets/images/charging.jpeg" class="hero-img"
+            alt="Photo of electric vehicle at a charging station.">
+    </div>
+
+
+
 
 {{> modal/login-block}}
