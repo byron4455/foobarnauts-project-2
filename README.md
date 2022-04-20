@@ -5,6 +5,7 @@
 <!--   * [Installation](#installation) -->
   * [Description](#description)
   * [Deployment](#deployment)
+  * [Screenshot](#screenshot)
   * [Demo](#demo)
   * [Tests](#tests) 
   <!-- * [Questions](#questions) -->
@@ -17,6 +18,9 @@ This app was built with HTML, CSS, Node.js, Express.js, Handlebars.js, JavaScrip
 
 # Deployment
  [Heroku](https://foobarnauts-project-2.herokuapp.com/)
+# Screenshot
+![Plugged In! Electric Vehicle Forum] (./client/assets/images/project2_landing.jpg)
+
 # Demo
   [Video Demo](./client/assets/images/walkthrough.mov)
 ## Tests
