@@ -19,7 +19,7 @@ This app was built with HTML, CSS, Node.js, Express.js, Handlebars.js, JavaScrip
 # Deployment
  [Heroku](https://foobarnauts-project-2.herokuapp.com/)
 # Screenshot
-![Plugged In! Electric Vehicle Forum] (./client/assets/images/project2_landing.jpg)
+![Plugged In! Electric Vehicle Forum](./client/assets/images/project2_landing.jpg)
 
 # Demo
   [Video Demo](./client/assets/images/walkthrough.mov)
