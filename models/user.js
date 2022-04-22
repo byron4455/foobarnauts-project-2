@@ -13,6 +13,9 @@ module.exports = function (sequelize, DataTypes) {
     lastName: {
       type: DataTypes.STRING
     },
+    username: {
+      type: DataTypes.STRING
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -45,6 +48,12 @@ module.exports = function (sequelize, DataTypes) {
   User.associate = function (models) {
     User.hasMany(models.Example, {
       onDelete: 'cascade'
+    });
+    User.hasMany(models.Post, {
+      foreignKey: 'poster_id'
+    });
+    User.hasMany(models.Comment, {
+      foreignKey: 'poster_id'
     });
   };
 

@@ -52,7 +52,7 @@ if (app.get('env') === 'test') {
 
 db.sequelize.sync(syncOptions).then(() => {
   if (app.get('env') !== 'test' && syncOptions.force) {
-    require('./db/seed')(db);
+    require('./db/index')(db);
   }
 
   app.listen(PORT, () => {

@@ -24,5 +24,13 @@ module.exports = (passport, db) => {
   router.get('/index', ensureAuthenticated);
   router.get('/research', ensureAuthenticated);
 
+  router.get('/posts', AppController.getPosts);
+  router.get('/posts/:id', AppController.getSinglePost);
+  router.post('/posts', ensureAuthenticated, AppController.createPost);
+
+  router.post('/comment', AppController.createComment)
+
+  
+
   return router;
 };

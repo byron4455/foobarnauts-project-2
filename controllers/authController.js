@@ -10,6 +10,7 @@ module.exports = (passport, db) => {
           email: req.body.email,
           password: req.body.password,
           firstName: req.body.firstName,
+          username: req.body.username,
           lastName: req.body.lastName
         };
 
@@ -54,6 +55,7 @@ module.exports = (passport, db) => {
         email: req.body.email,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
+        username: req.body.username,
         password: req.body.password
       }, {
         where: { id: req.params.id }
