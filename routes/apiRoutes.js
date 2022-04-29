@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const appController = require('../controllers/appController');
 const ensureAuthenticated = require('../middlewares/ensureAuthenticated');
 
 module.exports = (passport, db) => {
@@ -12,7 +13,7 @@ module.exports = (passport, db) => {
   router.put('/user/:id', ensureAuthenticated, AuthController.updateUser);
   router.delete('/user/:id', ensureAuthenticated, AuthController.deleteUser);
   router.post('/user/confirm', AuthController.confirmAuth);
-
+  // 'https://api.api-ninjas.com/v1/cars?limit=10&make=' + req.params.model
   // App
   router.get('/examples', AppController.getExamples);
   router.post('/examples', AppController.createExample);
@@ -23,6 +24,9 @@ module.exports = (passport, db) => {
   router.get('/forum-topics', ensureAuthenticated);
   router.get('/index', ensureAuthenticated);
   router.get('/research', ensureAuthenticated);
+  // router.get('/cars/electricity', AppController.getElectricCars);
+router.get('/cars/:model', AppController.getCarByMake);
+
 
   return router;
 };

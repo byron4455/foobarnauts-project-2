@@ -1,6 +1,5 @@
 $('#add-user').on('click', function (event) {
   event.preventDefault();
-
   const newAccount = {
     firstName: $('#inputFirst').val().trim(),
     lastName: $('#inputLast').val().trim(),
@@ -18,15 +17,14 @@ $('#add-user').on('click', function (event) {
     });
   } else {
     console.log('**Please fill out entire form**');
-    $('#create-err-msg').empty('').text('**Please fill out entire form**');
-  }
+    $('#create-err-msg').empty('').text('**Please fill out entire form**')}                                
 });
 
 $('#update-user').on('click', function (event) {
   event.preventDefault();
 
   const id = $(this).data('id');
-
+                                     
   // capture All changes
   const changeUser = {
     firstName: $('#inputFirst').val().trim(),
@@ -130,7 +128,6 @@ $('#login').on('click', function (event) {
       $('#user-info').modal('hide');
     }
   });
-<<<<<<< HEAD:public/assets/js/app.js
 });
 
 
@@ -143,9 +140,10 @@ let deleteModal = document.getElementById('delete-user-modal');
 let deleteButton = document.getElementById('delete-user');
 let modalClose = document.getElementById('closeModal');
 
-
+if(usernameButton){
 usernameButton.onclick = function() {
   loginModal.style.display = 'block';
+}
 }
 // ROTATES LOGIN FORM TO REGISTER FORM
 function openRegister(){
@@ -218,6 +216,3 @@ function lsRememberMe() {
   // modalClose.onclick = function() {
   //   deleteModal.style.display = 'none';
   // }
-=======
-});
->>>>>>> f5e518b368302b55222b2b12661a69c7c999e937:client/assets/js/app.js

@@ -366,10 +366,12 @@ form.example::after {
   content: "";
   clear: both;
   display: table;
+  max-width: 600px;
 }
 .searching {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 .example {
   display: flex;
@@ -377,26 +379,37 @@ form.example::after {
   justify-content: center;
   align-items: baseline;
 }
-table, th, td {
-  border: 1px solid black;
+h1, caption {
+  font-weight: bold;
+  font-size: larger;
+  text-align: center;
+  padding-top: 10px;
+}
+table, th, td, caption {
+  border: 3px solid black;
   border-collapse: collapse;
-  padding: 5px;
+  padding: 10px 20px 10px 20px;
 }
 tr, td {
 padding: 8px;
 }
 .searchvehicle {
   display: flex;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   justify-content: space-around;
 }
 .vehiclecontainer {
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
-.searchEVvehicle {
-  display: flex;
-  justify-content: space-around;
+.researchBox{
+  margin: 0 auto;
+  width: 600px;
+}
+table {
+  max-width: 600px;
+  align-content: center;
 }
 .about {
   text-align: center;
