@@ -6,7 +6,7 @@
 <!-- The Search Make -->
 <div class="searching">
   <form class="example">
-    <input type="text" placeholder="Search.." id="vehiclesearch" name="search">
+    <input type="text" placeholder="Make Model" id="vehiclesearch" name="search">
     <button type="submit" id="research"><i class="fa fa-search"></i></button>
   </form>
 </div>
@@ -33,20 +33,25 @@
   </label>
 </div> --}}
 
-<div class="vehiclecontainer">
-  <div class="searchvehicle">
-    <table id="vehicleSearch">
-      <caption>Vehicle Search</caption>
+<div class="vehiclecontainer mt-4">
+    <table id="vehicleSearch" class="table is-bordered">
+      <caption>Vehicle Search</caption> 
+      <thead>
       <tr>
         <th>Make</th>
         <th>Model</th>
         <th>Year</th>
         <th>City MPG</th>
         <th>Fuel Type</th>
-
       </tr>
-     </div> {{!-- TODO: vehicle search div --}}
+      </thead>
+
+      <tbody id="tableBody">
+
+      </tbody>
     </table>
+  </div> {{!-- TODO: vehicle search div --}}
+
   {{!-- <table class="searchEVvehicle">
     <table id="evvehicle">
       <caption>Electric Vehicles</caption>
@@ -60,6 +65,5 @@
       </tr>
 
     </table> --}}
-</div>
 </div>
 <script src="assets/js/research.js"></script>

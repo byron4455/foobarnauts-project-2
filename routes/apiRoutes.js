@@ -25,7 +25,7 @@ module.exports = (passport, db) => {
   router.get('/index', ensureAuthenticated);
   router.get('/research', ensureAuthenticated);
   // router.get('/cars/electricity', AppController.getElectricCars);
-router.get('/cars/:model', AppController.getCarByMake);
+  router.get('/cars', AppController.getCarByMake);
 
 
   return router;

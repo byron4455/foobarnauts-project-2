@@ -31,11 +31,12 @@ module.exports = function (db) {
       });
     },
     getCarByMake: function (req, res) {
-      console.log(req.params.model)
+      console.log(req.query)
       axios.request({
         method: 'GET',
         url: 'https://cars-by-api-ninjas.p.rapidapi.com/v1/cars',
-        params: { make: req.params.model, limit:30, fuel_type:'electricity'},
+    method: 'GET',
+        params: { make: req.query.make, model: req.query.model, limit:30, fuel_type:'electricity'},
         headers: {
           'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com',
           'X-RapidAPI-Key': process.env.API_KEY

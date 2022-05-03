@@ -15,21 +15,21 @@ $('#research').on('click', function (event) {
 
 //https://rapidapi.com/apininjas/api/cars-by-api-ninjas/
 getCar = function() {
-var model = document.getElementById('vehiclesearch').value;                                     
+    var searchVal =  document.getElementById('vehiclesearch').value.split(" "); 
+    var make = searchVal[0]
+    var model = searchVal.slice(1).join(' ');                  
 $.ajax({
     method: 'GET',
-    url: "/api/cars/" + model,
+    url: "/api/cars?make=" + make + "&model=" + model,
     // headers: { 'X-Api-Key': token},
     // contentType: 'application/json',
     success: function(result) {
         console.log(result);
         var data = result;
-        var rn = $('#vehicleSearch');
+        var rn = $('#tableBody');
         rn.empty()
-        var caption = $("<caption>")
-        caption.text("Vehicle Search")
         // attach Vehicle Search to header of table
-        rn.append
+
         for(var i=0; i<data.length; i++) {
  
            
@@ -41,7 +41,9 @@ $.ajax({
     }
 });
 };
-
+document.getElementById('vehiclesearch').addEventListener('input',function(e){
+console.log(e.target.value)
+})
 // getEV = function() {
 //     $.ajax({
 //         method: 'GET',
