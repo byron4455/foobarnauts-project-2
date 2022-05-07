@@ -1,6 +1,6 @@
 # Plugged In! Electric Vehicle Forum
 
-![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
+![Github license](http://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description
 
@@ -22,7 +22,8 @@ This app was built with HTML, CSS, Node.js, Express.js, Handlebars.js, JavaScrip
 
 # Demo
 
-[Video Demo](./client/assets/images/walkthrough.mov)
+[Video Demo](./client/assets/images/PluggedIn_Screenshot.mov)
+[Demo Vehicle Search] (https://drive.google.com/file/d/1u25O3Bgwya2lC4LbPkY3HzozNEXizQj9/view?usp=sharing)
 
 ## Tests
 
