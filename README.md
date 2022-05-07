@@ -23,7 +23,8 @@ This app was built with HTML, CSS, Node.js, Express.js, Handlebars.js, JavaScrip
 # Demo
 
 [Video Demo](./client/assets/images/PluggedIn_Screenshot.mov)
-[Demo Vehicle Search] (https://drive.google.com/file/d/1u25O3Bgwya2lC4LbPkY3HzozNEXizQj9/view?usp=sharing)
+
+[Video Demo 2](./client/assets/images/Vehicle_Search.mov)
 
 ## Tests
 
